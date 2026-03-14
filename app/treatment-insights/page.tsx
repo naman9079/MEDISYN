@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -32,66 +33,40 @@ import {
   YAxis, 
   CartesianGrid, 
   ResponsiveContainer,
-  BarChart,
-  Bar,
   PieChart,
   Pie,
   Cell,
   Tooltip,
-  Legend,
-  RadialBarChart,
-  RadialBar
 } from "recharts"
-
-const treatmentData = {
-  name: "Metformin",
-  condition: "Type 2 Diabetes",
-  totalPatients: 12847,
-  avgRecoveryWeeks: 6.2,
-  positiveRate: 78,
-  analyses: 8934
-}
-
-const sideEffectsData = [
-  { name: "Nausea", percentage: 32, severity: "mild" },
-  { name: "Diarrhea", percentage: 28, severity: "mild" },
-  { name: "Stomach Pain", percentage: 18, severity: "moderate" },
-  { name: "Metallic Taste", percentage: 15, severity: "mild" },
-  { name: "Headache", percentage: 12, severity: "mild" },
-  { name: "Dizziness", percentage: 8, severity: "moderate" },
-]
-
-const sentimentBreakdown = [
-  { name: "Very Positive", value: 45, fill: "hsl(var(--accent))" },
-  { name: "Positive", value: 33, fill: "hsl(var(--chart-2))" },
-  { name: "Neutral", value: 15, fill: "hsl(var(--chart-4))" },
-  { name: "Negative", value: 7, fill: "hsl(var(--chart-5))" },
-]
-
-const recoveryTimeline = [
-  { week: "Week 1", percentage: 15, milestone: "Initial adaptation" },
-  { week: "Week 2", percentage: 28, milestone: "Side effects decrease" },
-  { week: "Week 3", percentage: 45, milestone: "Blood sugar stabilizing" },
-  { week: "Week 4", percentage: 62, milestone: "Consistent improvement" },
-  { week: "Week 5", percentage: 78, milestone: "Near target levels" },
-  { week: "Week 6", percentage: 89, milestone: "Stable condition" },
-  { week: "Week 8", percentage: 95, milestone: "Full effectiveness" },
-]
-
-const treatments = [
-  { id: 1, name: "Metformin", condition: "Type 2 Diabetes", patients: 12847, rating: 4.2 },
-  { id: 2, name: "Lisinopril", condition: "Hypertension", patients: 9823, rating: 4.5 },
-  { id: 3, name: "Sertraline", condition: "Depression/Anxiety", patients: 8567, rating: 3.9 },
-  { id: 4, name: "Omeprazole", condition: "GERD", patients: 7234, rating: 4.3 },
-  { id: 5, name: "Atorvastatin", condition: "High Cholesterol", patients: 6892, rating: 4.1 },
-  { id: 6, name: "Levothyroxine", condition: "Hypothyroidism", patients: 5678, rating: 4.4 },
-]
-
-const efficacyData = [
-  { name: "Effectiveness", value: 85, fill: "hsl(var(--primary))" },
-]
+import { api, type TreatmentSummary, type TreatmentDetail } from "@/lib/api"
 
 export default function TreatmentInsightsPage() {
+  const [treatments, setTreatments] = useState<TreatmentSummary[]>([])
+  const [selectedId, setSelectedId] = useState<number>(1)
+  const [detail, setDetail] = useState<TreatmentDetail | null>(null)
+  const [searchQuery, setSearchQuery] = useState("")
+  const [conditionFilter, setConditionFilter] = useState("all")
+  const [sortBy, setSortBy] = useState("rating")
+
+  useEffect(() => {
+    api.listTreatments({ search: searchQuery, condition: conditionFilter, sort_by: sortBy })
+      .then(data => {
+        setTreatments(data)
+        if (data.length > 0 && !data.find(t => t.id === selectedId)) {
+          setSelectedId(data[0].id)
+        }
+      })
+      .catch(console.error)
+  }, [searchQuery, conditionFilter, sortBy])
+
+  useEffect(() => {
+    api.getTreatment(selectedId).then(setDetail).catch(console.error)
+  }, [selectedId])
+
+  const sideEffectsData = detail?.side_effects ?? []
+  const sentimentBreakdown = detail?.sentiment_breakdown ?? []
+  const recoveryTimeline = detail?.recovery_timeline ?? []
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -111,9 +86,11 @@ export default function TreatmentInsightsPage() {
               type="search"
               placeholder="Search treatments..."
               className="pl-10"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <Select defaultValue="all">
+          <Select value={conditionFilter} onValueChange={setConditionFilter}>
             <SelectTrigger className="w-full sm:w-48">
               <SelectValue placeholder="Condition" />
             </SelectTrigger>
@@ -125,7 +102,7 @@ export default function TreatmentInsightsPage() {
               <SelectItem value="gerd">GERD</SelectItem>
             </SelectContent>
           </Select>
-          <Select defaultValue="rating">
+          <Select value={sortBy} onValueChange={setSortBy}>
             <SelectTrigger className="w-full sm:w-48">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
@@ -150,7 +127,8 @@ export default function TreatmentInsightsPage() {
                   {treatments.map((treatment, index) => (
                     <div 
                       key={treatment.id}
-                      className={`flex items-center justify-between p-4 cursor-pointer transition-colors hover:bg-muted/50 ${index === 0 ? "bg-primary/5" : ""}`}
+                      className={`flex items-center justify-between p-4 cursor-pointer transition-colors hover:bg-muted/50 ${treatment.id === selectedId ? "bg-primary/5" : ""}`}
+                      onClick={() => setSelectedId(treatment.id)}
                     >
                       <div className="flex items-center gap-3">
                         <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -176,8 +154,8 @@ export default function TreatmentInsightsPage() {
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div>
-                    <CardTitle className="text-2xl">{treatmentData.name}</CardTitle>
-                    <CardDescription className="text-base">{treatmentData.condition}</CardDescription>
+                    <CardTitle className="text-2xl">{detail?.name ?? "—"}</CardTitle>
+                    <CardDescription className="text-base">{detail?.condition ?? "—"}</CardDescription>
                   </div>
                   <Badge className="bg-accent text-accent-foreground">Active</Badge>
                 </div>
@@ -186,22 +164,22 @@ export default function TreatmentInsightsPage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center p-4 rounded-lg bg-muted/30">
                     <Users className="h-5 w-5 text-primary mx-auto mb-2" />
-                    <p className="text-2xl font-semibold text-foreground">{treatmentData.totalPatients.toLocaleString()}</p>
+                    <p className="text-2xl font-semibold text-foreground">{(detail?.total_patients ?? 0).toLocaleString()}</p>
                     <p className="text-sm text-muted-foreground">Total Patients</p>
                   </div>
                   <div className="text-center p-4 rounded-lg bg-muted/30">
                     <Clock className="h-5 w-5 text-primary mx-auto mb-2" />
-                    <p className="text-2xl font-semibold text-foreground">{treatmentData.avgRecoveryWeeks}</p>
+                    <p className="text-2xl font-semibold text-foreground">{detail?.avg_recovery_weeks ?? "—"}</p>
                     <p className="text-sm text-muted-foreground">Avg. Recovery (weeks)</p>
                   </div>
                   <div className="text-center p-4 rounded-lg bg-muted/30">
                     <Heart className="h-5 w-5 text-accent mx-auto mb-2" />
-                    <p className="text-2xl font-semibold text-foreground">{treatmentData.positiveRate}%</p>
+                    <p className="text-2xl font-semibold text-foreground">{detail?.positive_rate ?? "—"}%</p>
                     <p className="text-sm text-muted-foreground">Positive Rate</p>
                   </div>
                   <div className="text-center p-4 rounded-lg bg-muted/30">
                     <FileText className="h-5 w-5 text-primary mx-auto mb-2" />
-                    <p className="text-2xl font-semibold text-foreground">{treatmentData.analyses.toLocaleString()}</p>
+                    <p className="text-2xl font-semibold text-foreground">{(detail?.analyses ?? 0).toLocaleString()}</p>
                     <p className="text-sm text-muted-foreground">Analyses</p>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -27,75 +28,28 @@ import {
   Bar,
   Tooltip
 } from "recharts"
+import { api, type DashboardStats } from "@/lib/api"
 
-const sideEffectsData = [
-  { name: "Nausea", value: 35 },
-  { name: "Headache", value: 28 },
-  { name: "Fatigue", value: 22 },
-  { name: "Dizziness", value: 15 },
-]
-
-const recoveryData = [
-  { week: "Week 1", patients: 120, recovered: 45 },
-  { week: "Week 2", patients: 120, recovered: 68 },
-  { week: "Week 3", patients: 120, recovered: 85 },
-  { week: "Week 4", patients: 120, recovered: 102 },
-  { week: "Week 5", patients: 120, recovered: 110 },
-  { week: "Week 6", patients: 120, recovered: 118 },
-]
-
-const sentimentData = [
-  { month: "Jan", positive: 65, neutral: 25, negative: 10 },
-  { month: "Feb", positive: 68, neutral: 22, negative: 10 },
-  { month: "Mar", positive: 72, neutral: 20, negative: 8 },
-  { month: "Apr", positive: 75, neutral: 18, negative: 7 },
-  { month: "May", positive: 78, neutral: 16, negative: 6 },
-  { month: "Jun", positive: 82, neutral: 14, negative: 4 },
-]
-
-const statsCards = [
-  { 
-    title: "Treatment Analyses", 
-    value: "2,847", 
-    change: "+12.5%", 
-    icon: Activity,
-    description: "Total treatments analyzed",
-    color: "primary"
-  },
-  { 
-    title: "Side Effects Tracked", 
-    value: "15,234", 
-    change: "+8.3%", 
-    icon: AlertTriangle,
-    description: "Reported side effects",
-    color: "warm"
-  },
-  { 
-    title: "Avg Recovery Time", 
-    value: "4.2 weeks", 
-    change: "-15.2%", 
-    icon: Clock,
-    description: "Across all treatments",
-    color: "accent"
-  },
-  { 
-    title: "Patient Sentiment", 
-    value: "82%", 
-    change: "+5.7%", 
-    icon: Heart,
-    description: "Positive feedback rate",
-    color: "primary"
-  },
-]
-
-const recentTreatments = [
-  { name: "Metformin", condition: "Type 2 Diabetes", sentiment: "positive", analyses: 1234, trend: "up" },
-  { name: "Lisinopril", condition: "Hypertension", sentiment: "positive", analyses: 987, trend: "up" },
-  { name: "Sertraline", condition: "Depression", sentiment: "neutral", analyses: 756, trend: "stable" },
-  { name: "Omeprazole", condition: "GERD", sentiment: "positive", analyses: 623, trend: "up" },
-]
+const iconMap: Record<string, React.ElementType> = {
+  "Treatment Analyses": Activity,
+  "Side Effects Tracked": AlertTriangle,
+  "Avg Recovery Time": Clock,
+  "Patient Sentiment": Heart,
+}
 
 export default function DashboardPage() {
+  const [data, setData] = useState<DashboardStats | null>(null)
+
+  useEffect(() => {
+    api.getDashboard().then(setData).catch(console.error)
+  }, [])
+
+  const sideEffectsData = data?.side_effects ?? []
+  const recoveryData = data?.recovery_data ?? []
+  const sentimentData = data?.sentiment_data ?? []
+  const statsCards = data?.stats ?? []
+  const recentTreatments = data?.recent_treatments ?? []
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -148,7 +102,7 @@ export default function DashboardPage() {
         {/* Stats Cards */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {statsCards.map((stat, index) => {
-            const Icon = stat.icon
+            const Icon = iconMap[stat.title] ?? Activity
             const bgClass = stat.color === "warm" ? "bg-warm/10" : stat.color === "accent" ? "bg-accent/10" : "bg-primary/10"
             const iconClass = stat.color === "warm" ? "text-warm" : stat.color === "accent" ? "text-accent" : "text-primary"
             return (

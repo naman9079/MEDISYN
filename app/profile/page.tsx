@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -26,22 +27,25 @@ import {
   CreditCard,
   CheckCircle2
 } from "lucide-react"
+import { api, type UserProfile } from "@/lib/api"
 
-const userStats = [
-  { label: "Analyses Run", value: "1,847", icon: Activity, trend: "+124 this month" },
-  { label: "Insights Generated", value: "423", icon: Sparkles, trend: "+38 this month" },
-  { label: "Hours Saved", value: "156", icon: Clock, trend: "Estimated time savings" },
-  { label: "Accuracy Score", value: "94.2%", icon: Award, trend: "Based on feedback" },
-]
-
-const recentActivity = [
-  { action: "Analyzed treatment", target: "Metformin for Type 2 Diabetes", time: "2 hours ago", type: "analysis" },
-  { action: "Generated insight", target: "Drug interaction warning", time: "4 hours ago", type: "insight" },
-  { action: "Reviewed report", target: "Q4 Patient Outcomes", time: "Yesterday", type: "report" },
-  { action: "Analyzed treatment", target: "Sertraline for Depression", time: "2 days ago", type: "analysis" },
-]
+const statIconMap: Record<string, React.ElementType> = {
+  "Analyses Run": Activity,
+  "Insights Generated": Sparkles,
+  "Hours Saved": Clock,
+  "Accuracy Score": Award,
+}
 
 export default function ProfilePage() {
+  const [profile, setProfile] = useState<UserProfile | null>(null)
+
+  useEffect(() => {
+    api.getProfile().then(setProfile).catch(console.error)
+  }, [])
+
+  const userStats = profile?.stats ?? []
+  const recentActivity = profile?.recent_activity ?? []
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -54,30 +58,30 @@ export default function ProfilePage() {
             <CardContent className="relative px-6 pb-6">
               <div className="flex flex-col sm:flex-row sm:items-end gap-4 -mt-16">
                 <Avatar className="h-28 w-28 ring-4 ring-card shadow-lg">
-                  <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=medisyn" alt="Dr. Sarah Chen" />
+                  <AvatarImage src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${profile?.avatar_seed ?? "medisyn"}`} alt={profile?.name ?? ""} />
                   <AvatarFallback className="bg-primary/10 text-primary text-2xl font-semibold">SC</AvatarFallback>
                 </Avatar>
                 <div className="flex-1 sm:pb-2">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
-                    <h1 className="text-2xl font-semibold text-foreground">Dr. Sarah Chen</h1>
+                    <h1 className="text-2xl font-semibold text-foreground">{profile?.name ?? "—"}</h1>
                     <Badge className="w-fit bg-warm/15 text-warm border-warm/30 hover:bg-warm/20">
                       <Zap className="h-3 w-3 mr-1" />
-                      Pro Plan
+                      {profile?.plan ?? "—"} Plan
                     </Badge>
                   </div>
-                  <p className="text-muted-foreground mt-1">Healthcare Data Analyst</p>
+                  <p className="text-muted-foreground mt-1">{profile?.role ?? "—"}</p>
                   <div className="flex flex-wrap items-center gap-4 mt-3 text-sm text-muted-foreground">
                     <span className="flex items-center gap-1.5">
                       <Building2 className="h-4 w-4" />
-                      Stanford Medical Center
+                      {profile?.organization ?? "—"}
                     </span>
                     <span className="flex items-center gap-1.5">
                       <MapPin className="h-4 w-4" />
-                      San Francisco, CA
+                      {profile?.location ?? "—"}
                     </span>
                     <span className="flex items-center gap-1.5">
                       <Calendar className="h-4 w-4" />
-                      Member since Jan 2024
+                      Member since {profile?.member_since ?? "—"}
                     </span>
                   </div>
                 </div>
@@ -92,7 +96,7 @@ export default function ProfilePage() {
         {/* Stats Grid */}
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {userStats.map((stat, index) => {
-            const Icon = stat.icon
+            const Icon = statIconMap[stat.label] ?? Activity
             return (
               <Card 
                 key={stat.label} 

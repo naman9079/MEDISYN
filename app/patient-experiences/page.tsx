@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -27,101 +27,9 @@ import {
   Filter,
   CheckCircle
 } from "lucide-react"
+import { api, type Experience } from "@/lib/api"
 
 type FilterType = "all" | "side-effects" | "recovery" | "outcome"
-
-const experiences = [
-  {
-    id: 1,
-    author: "Anonymous User",
-    initials: "AU",
-    treatment: "Metformin",
-    condition: "Type 2 Diabetes",
-    date: "2 days ago",
-    content: "Started Metformin 3 months ago. Initial nausea was tough for the first 2 weeks, but it significantly improved. My blood sugar levels are now stable and within the target range. Overall very satisfied with the treatment.",
-    tags: ["Recovery", "Outcome"],
-    sentiment: "positive",
-    credibilityScore: 92,
-    likes: 47,
-    replies: 12,
-    verified: true
-  },
-  {
-    id: 2,
-    author: "Patient 2847",
-    initials: "P2",
-    treatment: "Lisinopril",
-    condition: "Hypertension",
-    date: "5 days ago",
-    content: "Experienced a persistent dry cough as a side effect which was quite bothersome. Doctor switched me to an ARB instead. Blood pressure control was good while on it though.",
-    tags: ["Side Effects"],
-    sentiment: "neutral",
-    credibilityScore: 88,
-    likes: 34,
-    replies: 8,
-    verified: true
-  },
-  {
-    id: 3,
-    author: "Anonymous User",
-    initials: "AU",
-    treatment: "Sertraline",
-    condition: "Anxiety",
-    date: "1 week ago",
-    content: "The first few weeks were challenging with increased anxiety and sleep issues. But after week 4, I started noticing significant improvement in my mood and anxiety levels. Now at month 3 and feeling much better.",
-    tags: ["Side Effects", "Recovery", "Outcome"],
-    sentiment: "positive",
-    credibilityScore: 95,
-    likes: 89,
-    replies: 23,
-    verified: true
-  },
-  {
-    id: 4,
-    author: "Patient 1893",
-    initials: "P1",
-    treatment: "Omeprazole",
-    condition: "GERD",
-    date: "2 weeks ago",
-    content: "Works well for acid reflux control. Taking it for 6 months now. Doctor mentioned concerns about long-term use and B12 absorption. Planning to discuss tapering strategy.",
-    tags: ["Outcome"],
-    sentiment: "positive",
-    credibilityScore: 85,
-    likes: 28,
-    replies: 15,
-    verified: false
-  },
-  {
-    id: 5,
-    author: "Anonymous User",
-    initials: "AU",
-    treatment: "Atorvastatin",
-    condition: "High Cholesterol",
-    date: "3 weeks ago",
-    content: "Developed muscle pain in my legs after starting. Doctor reduced the dose and the symptoms improved. Cholesterol numbers look much better now. Monitoring liver enzymes regularly.",
-    tags: ["Side Effects", "Recovery"],
-    sentiment: "neutral",
-    credibilityScore: 91,
-    likes: 42,
-    replies: 7,
-    verified: true
-  },
-  {
-    id: 6,
-    author: "Patient 5621",
-    initials: "P5",
-    treatment: "Metformin",
-    condition: "Type 2 Diabetes",
-    date: "1 month ago",
-    content: "Extended release version worked much better for me than regular Metformin. Less GI side effects. A1C dropped from 8.2 to 6.8 in 4 months. Very happy with the results.",
-    tags: ["Outcome", "Recovery"],
-    sentiment: "positive",
-    credibilityScore: 94,
-    likes: 67,
-    replies: 19,
-    verified: true
-  },
-]
 
 const tagColors: Record<string, string> = {
   "Side Effects": "bg-destructive/10 text-destructive border-destructive/20",
@@ -132,8 +40,13 @@ const tagColors: Record<string, string> = {
 export default function PatientExperiencesPage() {
   const [activeFilter, setActiveFilter] = useState<FilterType>("all")
   const [searchQuery, setSearchQuery] = useState("")
+  const [allExperiences, setAllExperiences] = useState<Experience[]>([])
 
-  const filteredExperiences = experiences.filter((exp) => {
+  useEffect(() => {
+    api.listExperiences().then(setAllExperiences).catch(console.error)
+  }, [])
+
+  const filteredExperiences = allExperiences.filter((exp) => {
     const matchesFilter = activeFilter === "all" || 
       exp.tags.some(tag => tag.toLowerCase().replace(" ", "-") === activeFilter)
     const matchesSearch = searchQuery === "" || 
@@ -142,6 +55,15 @@ export default function PatientExperiencesPage() {
       exp.condition.toLowerCase().includes(searchQuery.toLowerCase())
     return matchesFilter && matchesSearch
   })
+
+  const handleLike = async (id: number) => {
+    try {
+      const updated = await api.likeExperience(id)
+      setAllExperiences(prev => prev.map(e => e.id === id ? updated : e))
+    } catch (err) {
+      console.error(err)
+    }
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -249,7 +171,7 @@ export default function PatientExperiencesPage() {
                   {/* Credibility Score */}
                   <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent/10">
                     <Shield className="h-3.5 w-3.5 text-accent" />
-                    <span className="text-sm font-medium text-accent">{experience.credibilityScore}%</span>
+                    <span className="text-sm font-medium text-accent">{experience.credibility_score}%</span>
                   </div>
                 </div>
 
@@ -282,7 +204,7 @@ export default function PatientExperiencesPage() {
                 {/* Footer */}
                 <div className="flex items-center justify-between pt-3 border-t border-border/40">
                   <div className="flex items-center gap-4">
-                    <button className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors">
+                    <button className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors" onClick={() => handleLike(experience.id)}>
                       <ThumbsUp className="h-4 w-4" />
                       <span className="text-sm">{experience.likes}</span>
                     </button>

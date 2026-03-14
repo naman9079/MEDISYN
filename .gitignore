@@ -15,3 +15,8 @@ next.user-config.*
 node_modules/
 .next/
 .DS_Store
+
+# Python backend local files
+backend/.venv/
+backend/__pycache__/
+*.pyc

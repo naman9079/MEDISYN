@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { 
+import {
   Sparkles,
   AlertTriangle,
   TrendingUp,
@@ -29,102 +29,16 @@ import {
   Zap,
   Info
 } from "lucide-react"
+import { api, type Insight, type InsightStat } from "@/lib/api"
 
 type InsightType = "all" | "discovery" | "alert" | "trend"
 
-const aiInsights = [
-  {
-    id: 1,
-    type: "discovery",
-    title: "Recovery Rate Improvement Detected",
-    summary: "Patients using combination therapy (Metformin + Lifestyle modifications) show 23% faster recovery compared to monotherapy alone.",
-    details: "Analysis of 4,283 patient records over 12 months reveals statistically significant improvement in glycemic control when medication is combined with structured diet and exercise programs.",
-    treatment: "Metformin",
-    condition: "Type 2 Diabetes",
-    confidence: 94,
-    impact: "high",
-    date: "Today",
-    dataPoints: 4283,
-    actionable: true
-  },
-  {
-    id: 2,
-    type: "alert",
-    title: "Potential Drug Interaction Warning",
-    summary: "Increased fatigue reports when combining Metformin with beta-blockers. 18% higher incidence compared to baseline.",
-    details: "Cross-referencing patient feedback data shows correlation between concurrent beta-blocker use and increased fatigue complaints. Recommend monitoring and potential dose adjustment.",
-    treatment: "Metformin + Beta-blockers",
-    condition: "Diabetes + Hypertension",
-    confidence: 87,
-    impact: "medium",
-    date: "Yesterday",
-    dataPoints: 1892,
-    actionable: true
-  },
-  {
-    id: 3,
-    type: "trend",
-    title: "Positive Sentiment Trend for SSRIs",
-    summary: "Patient satisfaction with SSRI treatments increased 12% over the past 6 months, correlating with better dosing protocols.",
-    details: "Gradual titration protocols showing improved patient tolerance and adherence. Side effect complaints decreased by 28% with slow-start dosing approaches.",
-    treatment: "SSRIs (Sertraline, Escitalopram)",
-    condition: "Depression/Anxiety",
-    confidence: 91,
-    impact: "medium",
-    date: "2 days ago",
-    dataPoints: 6721,
-    actionable: false
-  },
-  {
-    id: 4,
-    type: "alert",
-    title: "Misinformation Pattern Detected",
-    summary: "Rising claims about Omeprazole causing bone fractures without proper context. Evidence suggests misinformation spread.",
-    details: "Analysis indicates correlation with long-term high-dose use only (>1 year). Current patient discussions lack this crucial context. Recommend educational content intervention.",
-    treatment: "Omeprazole",
-    condition: "GERD",
-    confidence: 82,
-    impact: "high",
-    date: "3 days ago",
-    dataPoints: 2341,
-    actionable: true
-  },
-  {
-    id: 5,
-    type: "discovery",
-    title: "Optimal Timing Pattern Identified",
-    summary: "Evening administration of Atorvastatin shows 15% better LDL reduction compared to morning dosing.",
-    details: "Analysis of cholesterol panel results across 3,456 patients indicates statistically significant improvement with evening administration, aligning with cholesterol synthesis patterns.",
-    treatment: "Atorvastatin",
-    condition: "High Cholesterol",
-    confidence: 89,
-    impact: "medium",
-    date: "1 week ago",
-    dataPoints: 3456,
-    actionable: true
-  },
-  {
-    id: 6,
-    type: "trend",
-    title: "Extended Release Formulation Preference",
-    summary: "Metformin XR showing 34% higher patient adherence rates compared to immediate release formulations.",
-    details: "Reduced GI side effects and once-daily dosing convenience driving preference. Healthcare providers increasingly recommending XR formulation for new patients.",
-    treatment: "Metformin XR",
-    condition: "Type 2 Diabetes",
-    confidence: 96,
-    impact: "high",
-    date: "1 week ago",
-    dataPoints: 5892,
-    actionable: false
-  },
-]
-
-const insightStats = [
-  { label: "Total Insights", value: "1,284", icon: Sparkles, change: "+24 this week" },
-  { label: "Critical Alerts", value: "12", icon: AlertTriangle, change: "3 require action" },
-  { label: "Discoveries", value: "847", icon: Lightbulb, change: "+156 this month" },
-  { label: "Data Points", value: "2.4M", icon: Activity, change: "Analyzed today" },
-]
+const statIconMap: Record<string, React.ElementType> = {
+  "Total Insights": Sparkles,
+  "Critical Alerts": AlertTriangle,
+  "Discoveries": Lightbulb,
+  "Data Points": Activity,
+}
 
 const typeConfig = {
   discovery: {
@@ -160,8 +74,15 @@ export default function AIInsightsPage() {
   const [activeFilter, setActiveFilter] = useState<InsightType>("all")
   const [searchQuery, setSearchQuery] = useState("")
   const [expandedId, setExpandedId] = useState<number | null>(null)
+  const [allInsights, setAllInsights] = useState<Insight[]>([])
+  const [insightStats, setInsightStats] = useState<InsightStat[]>([])
 
-  const filteredInsights = aiInsights.filter((insight) => {
+  useEffect(() => {
+    api.listInsights().then(setAllInsights).catch(console.error)
+    api.getInsightStats().then(setInsightStats).catch(console.error)
+  }, [])
+
+  const filteredInsights = allInsights.filter((insight) => {
     const matchesFilter = activeFilter === "all" || insight.type === activeFilter
     const matchesSearch = searchQuery === "" || 
       insight.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -191,7 +112,7 @@ export default function AIInsightsPage() {
         {/* Stats Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {insightStats.map((stat) => {
-            const Icon = stat.icon
+            const Icon = statIconMap[stat.label] ?? Activity
             return (
               <Card key={stat.label} className="border-border/40 shadow-sm">
                 <CardContent className="p-4">
@@ -342,7 +263,7 @@ export default function AIInsightsPage() {
                     </span>
                     <span className="flex items-center gap-1">
                       <Info className="h-3.5 w-3.5" />
-                      {insight.dataPoints.toLocaleString()} data points
+                      {insight.data_points.toLocaleString()} data points
                     </span>
                   </div>
 
