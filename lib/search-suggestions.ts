@@ -1,0 +1,28 @@
+export const medisynSearchSuggestionId = "medisyn-search-suggestions"
+
+export const medisynSearchSuggestions = [
+  "Pancreatitis",
+  "Cancer",
+  "Asthma",
+  "Migraine",
+  "Hypertension",
+  "Hypotension",
+  "Viral fever",
+  "Chickenpox",
+  "Leg fracture",
+  "Hand fracture",
+  "custom treatment side effects",
+  "recovery timeline",
+  "patient outcome trend",
+  "treatment adherence pattern",
+  "dose adjustment feedback",
+  "early warning signal",
+  "condition progression notes",
+  "safety concerns",
+  "custom biomarker change",
+  "sleep disruption after treatment",
+  "quality of life trend",
+  "symptom flare report",
+  "supportive therapy experience",
+  "long-term follow-up",
+] as const

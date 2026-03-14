@@ -1,0 +1,103 @@
+{
+  "profile": {
+    "firstName": "Naman",
+    "lastName": "shukla",
+    "email": "namanshukla328@gmail.com",
+    "role": "Healthcare Data Analyst",
+    "organization": "Stanford Medical Center",
+    "location": "india",
+    "memberSince": "2024-01-01",
+    "avatarSeed": "medisyn"
+  },
+  "notifications": {
+    "aiInsightAlerts": true,
+    "treatmentUpdates": true,
+    "weeklyDigest": false,
+    "securityAlerts": true
+  },
+  "security": {
+    "twoFactorEnabled": true,
+    "passwordUpdatedAt": "2026-02-13T00:00:00.000Z"
+  },
+  "subscription": {
+    "plan": "pro",
+    "status": "active",
+    "billingPeriod": "monthly",
+    "nextBillingDate": "2026-04-15",
+    "amount": 49,
+    "currency": "USD",
+    "autoRenew": true
+  },
+  "stats": {
+    "analysesRun": 1847,
+    "insightsGenerated": 423,
+    "hoursSaved": 156,
+    "accuracyScore": 94.2
+  },
+  "recentActivity": [
+    {
+      "id": "ca3b97e8-3f18-4d89-8b4e-e1b11e25f09b",
+      "action": "Updated profile",
+      "target": "Account information and contact details",
+      "type": "account",
+      "time": "2026-03-14T20:13:35.526Z"
+    },
+    {
+      "id": "23e845f5-50f6-498b-a12d-1a466f438392",
+      "action": "Updated profile",
+      "target": "Account information and contact details",
+      "type": "account",
+      "time": "2026-03-14T20:02:46.412Z"
+    },
+    {
+      "id": "de03f3d4-df75-4684-8472-08720dc8371e",
+      "action": "Enabled 2FA",
+      "target": "Two-factor authentication",
+      "type": "account",
+      "time": "2026-03-14T19:57:14.219Z"
+    },
+    {
+      "id": "96bb71a1-1e2c-4ccf-b33f-019844c5750b",
+      "action": "Disabled 2FA",
+      "target": "Two-factor authentication",
+      "type": "account",
+      "time": "2026-03-14T19:57:12.778Z"
+    },
+    {
+      "id": "1580e538-8984-46cf-9692-5a04629d2074",
+      "action": "Restored subscription",
+      "target": "PRO plan (monthly)",
+      "type": "subscription",
+      "time": "2026-03-14T19:54:41.008Z"
+    },
+    {
+      "id": "423367b8-1f1c-4147-ab78-4006c3981dc8",
+      "action": "Updated subscription",
+      "target": "ENTERPRISE plan (yearly)",
+      "type": "subscription",
+      "time": "2026-03-14T19:54:32.019Z"
+    },
+    {
+      "id": "c7b201a6-3b6d-41ca-bc2d-19b9298b8135",
+      "action": "Analyzed treatment",
+      "target": "Custom treatment analysis",
+      "time": "2026-03-14T19:54:09.952Z",
+      "type": "analysis"
+    },
+    {
+      "id": "f9ba878f-bc0b-4091-b945-56d716e7fe11",
+      "action": "Generated insight",
+      "target": "Drug interaction warning",
+      "time": "2026-03-14T19:54:09.952Z",
+      "type": "insight"
+    },
+    {
+      "id": "dcf21dd0-f306-40b4-aaeb-7d63c77e4312",
+      "action": "Reviewed report",
+      "target": "Q4 Patient Outcomes",
+      "time": "2026-03-14T19:54:09.952Z",
+      "type": "report"
+    }
+  ],
+  "updatedAt": "2026-03-14T20:13:35.526Z"
+}

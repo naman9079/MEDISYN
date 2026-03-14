@@ -1,0 +1,36 @@
+[
+	{
+		"id": "custom-reddit-disease-tracker",
+		"type": "reddit",
+		"name": "Custom Disease Tracker (Reddit)",
+		"enabled": false,
+		"subreddit": "AskDocs",
+		"query": "(pancreatitis OR cancer OR asthma OR migraine OR hypertension OR hypotension OR \"viral fever\" OR chickenpox OR \"leg fracture\" OR \"hand fracture\")",
+		"sort": "new",
+		"limit": 40,
+		"keywords": [
+			"pancreatitis",
+			"pancreataitis",
+			"cancer",
+			"asthma",
+			"migraine",
+			"migrain",
+			"hypertension",
+			"high blood pressure",
+			"bp high",
+			"high bp",
+			"hypotension",
+			"low blood pressure",
+			"bp low",
+			"low bp",
+			"viral fever",
+			"chickenpox",
+			"chicken pox",
+			"chikon pox",
+			"leg fracture",
+			"fracture of leg",
+			"hand fracture",
+			"fracture of hand"
+		]
+	}
+]

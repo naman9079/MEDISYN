@@ -127,3 +127,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes hero-ecg-pulse {
+  0% {
+    stroke-dashoffset: 260;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.4;
+  }
+}
+
+.hero-ecg path {
+  stroke-dasharray: 260;
+  animation: hero-ecg-pulse 2.4s ease-in-out infinite;
+}
