@@ -3,10 +3,20 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Activity, LayoutDashboard, Users, Sparkles, Search, Bell, Menu } from "lucide-react"
+import { Activity, LayoutDashboard, Users, Sparkles, Search, Bell, Menu, User, Settings, LogOut, HelpCircle, CreditCard } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -19,17 +29,17 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-card/95 backdrop-blur-md supports-[backdrop-filter]:bg-card/80">
       <div className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:scale-105">
               <Activity className="h-5 w-5 text-primary-foreground" />
             </div>
             <span className="text-xl font-semibold tracking-tight text-foreground">Medisyn</span>
           </Link>
           
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const Icon = item.icon
               return (
@@ -37,10 +47,10 @@ export function Navigation() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg transition-colors",
+                    "flex items-center gap-2 px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200",
                     pathname === item.href
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                      ? "bg-primary/10 text-primary shadow-sm"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
                   )}
                 >
                   <Icon className="h-4 w-4" />
@@ -51,57 +61,160 @@ export function Navigation() {
           </nav>
         </div>
 
-        <div className="flex items-center gap-3">
-          <div className="relative hidden sm:block">
+        <div className="flex items-center gap-2">
+          <div className="relative hidden md:block">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Search treatment or condition..."
-              className="w-64 pl-9 bg-muted/50 border-0 focus-visible:ring-1 focus-visible:ring-primary/30"
+              placeholder="Search treatments..."
+              className="w-56 lg:w-64 pl-9 bg-muted/40 border-0 rounded-xl focus-visible:ring-1 focus-visible:ring-primary/40 transition-all duration-200 focus-visible:w-72"
             />
           </div>
           
-          <Button variant="ghost" size="icon" className="relative">
-            <Bell className="h-5 w-5 text-muted-foreground" />
-            <span className="absolute -top-0.5 -right-0.5 h-2 w-2 rounded-full bg-accent" />
+          <Button variant="ghost" size="icon" className="relative group transition-colors duration-200">
+            <Bell className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+            <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-warm animate-pulse" />
           </Button>
 
+          {/* Profile Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="relative h-10 w-10 rounded-full ring-2 ring-transparent hover:ring-primary/20 transition-all duration-200">
+                <Avatar className="h-9 w-9">
+                  <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=medisyn" alt="Dr. Sarah Chen" />
+                  <AvatarFallback className="bg-primary/10 text-primary text-sm font-medium">SC</AvatarFallback>
+                </Avatar>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-64 p-2" align="end" sideOffset={8}>
+              <DropdownMenuLabel className="font-normal p-3 -mx-2 -mt-2 mb-1 bg-muted/50 rounded-lg">
+                <div className="flex items-center gap-3">
+                  <Avatar className="h-11 w-11 ring-2 ring-primary/20">
+                    <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=medisyn" alt="Dr. Sarah Chen" />
+                    <AvatarFallback className="bg-primary/10 text-primary">SC</AvatarFallback>
+                  </Avatar>
+                  <div className="flex flex-col">
+                    <p className="text-sm font-semibold text-foreground">Dr. Sarah Chen</p>
+                    <p className="text-xs text-muted-foreground">sarah.chen@medisyn.ai</p>
+                    <span className="text-[10px] mt-1 px-1.5 py-0.5 rounded-full bg-warm/20 text-warm w-fit font-medium">Pro Plan</span>
+                  </div>
+                </div>
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator className="-mx-2" />
+              <DropdownMenuGroup>
+                <DropdownMenuItem className="gap-3 py-2.5 cursor-pointer rounded-lg" asChild>
+                  <Link href="/profile">
+                    <User className="h-4 w-4 text-muted-foreground" />
+                    <div className="flex flex-col">
+                      <span className="text-sm">Profile</span>
+                      <span className="text-xs text-muted-foreground">Manage your account</span>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="gap-3 py-2.5 cursor-pointer rounded-lg">
+                  <CreditCard className="h-4 w-4 text-muted-foreground" />
+                  <div className="flex flex-col">
+                    <span className="text-sm">Billing</span>
+                    <span className="text-xs text-muted-foreground">Manage subscription</span>
+                  </div>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="gap-3 py-2.5 cursor-pointer rounded-lg">
+                  <Settings className="h-4 w-4 text-muted-foreground" />
+                  <div className="flex flex-col">
+                    <span className="text-sm">Settings</span>
+                    <span className="text-xs text-muted-foreground">Preferences & privacy</span>
+                  </div>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="gap-3 py-2.5 cursor-pointer rounded-lg">
+                  <HelpCircle className="h-4 w-4 text-muted-foreground" />
+                  <div className="flex flex-col">
+                    <span className="text-sm">Help & Support</span>
+                    <span className="text-xs text-muted-foreground">Get assistance</span>
+                  </div>
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+              <DropdownMenuSeparator className="-mx-2" />
+              <DropdownMenuItem className="gap-3 py-2.5 cursor-pointer rounded-lg text-destructive focus:text-destructive">
+                <LogOut className="h-4 w-4" />
+                <span className="text-sm">Log out</span>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <Sheet>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
+            <SheetTrigger asChild className="lg:hidden">
+              <Button variant="ghost" size="icon" className="ml-1">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72">
-              <div className="flex flex-col gap-4 mt-6">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                  <Input
-                    type="search"
-                    placeholder="Search..."
-                    className="w-full pl-9"
-                  />
+            <SheetContent side="right" className="w-80 p-0">
+              <div className="flex flex-col h-full">
+                {/* Profile Section in Mobile */}
+                <div className="p-5 border-b border-border/40 bg-muted/30">
+                  <div className="flex items-center gap-3">
+                    <Avatar className="h-12 w-12 ring-2 ring-primary/20">
+                      <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=medisyn" alt="Dr. Sarah Chen" />
+                      <AvatarFallback className="bg-primary/10 text-primary">SC</AvatarFallback>
+                    </Avatar>
+                    <div className="flex flex-col">
+                      <p className="text-sm font-semibold text-foreground">Dr. Sarah Chen</p>
+                      <p className="text-xs text-muted-foreground">sarah.chen@medisyn.ai</p>
+                      <span className="text-[10px] mt-1 px-1.5 py-0.5 rounded-full bg-warm/20 text-warm w-fit font-medium">Pro Plan</span>
+                    </div>
+                  </div>
                 </div>
-                <nav className="flex flex-col gap-1">
-                  {navItems.map((item) => {
-                    const Icon = item.icon
-                    return (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className={cn(
-                          "flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-lg transition-colors",
-                          pathname === item.href
-                            ? "bg-primary/10 text-primary"
-                            : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                        )}
-                      >
-                        <Icon className="h-5 w-5" />
-                        {item.label}
+
+                <div className="flex-1 p-4 overflow-auto">
+                  <div className="relative mb-4">
+                    <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                    <Input
+                      type="search"
+                      placeholder="Search..."
+                      className="w-full pl-9 rounded-xl"
+                    />
+                  </div>
+                  <nav className="flex flex-col gap-1">
+                    {navItems.map((item) => {
+                      const Icon = item.icon
+                      return (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={cn(
+                            "flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200",
+                            pathname === item.href
+                              ? "bg-primary/10 text-primary shadow-sm"
+                              : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                          )}
+                        >
+                          <Icon className="h-5 w-5" />
+                          {item.label}
+                        </Link>
+                      )
+                    })}
+                  </nav>
+
+                  <div className="mt-6 pt-6 border-t border-border/40">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-3 px-4">Account</p>
+                    <nav className="flex flex-col gap-1">
+                      <Link href="/profile" className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-200">
+                        <User className="h-5 w-5" />
+                        Profile
                       </Link>
-                    )
-                  })}
-                </nav>
+                      <Link href="#" className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-all duration-200">
+                        <Settings className="h-5 w-5" />
+                        Settings
+                      </Link>
+                    </nav>
+                  </div>
+                </div>
+
+                <div className="p-4 border-t border-border/40">
+                  <Button variant="outline" className="w-full gap-2 rounded-xl text-destructive hover:text-destructive hover:bg-destructive/10">
+                    <LogOut className="h-4 w-4" />
+                    Log out
+                  </Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>

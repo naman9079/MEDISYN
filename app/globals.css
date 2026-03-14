@@ -28,6 +28,8 @@
   --chart-3: oklch(0.6 0.12 280);
   --chart-4: oklch(0.7 0.15 80);
   --chart-5: oklch(0.55 0.2 25);
+  --warm: oklch(0.68 0.16 25);
+  --warm-foreground: oklch(1 0 0);
   --radius: 0.75rem;
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.2 0.02 240);
@@ -101,6 +103,8 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-warm: var(--warm);
+  --color-warm-foreground: var(--warm-foreground);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
