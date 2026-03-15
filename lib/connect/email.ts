@@ -64,7 +64,6 @@ export async function sendBookingConfirmationEmails({ booking, mentor }: Booking
     `Session Type: ${booking.sessionType}`,
     `Duration: ${booking.durationMinutes} minutes`,
     `Scheduled At: ${formatDate(booking.scheduledAt)}`,
-    `Payment Status: ${booking.paymentStatus}`,
     `Amount: $${booking.amountUsd}`,
   ]
 

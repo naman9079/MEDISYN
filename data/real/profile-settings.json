@@ -25,7 +25,7 @@
     "billingPeriod": "monthly",
     "nextBillingDate": "2026-04-15",
     "amount": 49,
-    "currency": "USD",
+    "currency": "INR",
     "autoRenew": true
   },
   "stats": {

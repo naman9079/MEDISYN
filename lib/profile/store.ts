@@ -39,7 +39,7 @@ function getDefaultProfile(): ProfileSettings {
       billingPeriod: "monthly",
       nextBillingDate: "2026-04-15",
       amount: 49,
-      currency: "USD",
+      currency: "INR",
       autoRenew: true,
     },
     stats: {
@@ -89,7 +89,19 @@ export async function loadProfileSettings() {
       throw new Error("Invalid profile settings shape")
     }
 
-    return parsed
+    const normalized: ProfileSettings = {
+      ...parsed,
+      subscription: {
+        ...parsed.subscription,
+        currency: "INR",
+      },
+    }
+
+    if (normalized.subscription.currency !== parsed.subscription.currency) {
+      await ensureFile(normalized)
+    }
+
+    return normalized
   } catch {
     const defaultProfile = getDefaultProfile()
     await ensureFile(defaultProfile)

@@ -6,6 +6,13 @@ import { usePathname, useRouter } from "next/navigation"
 import { useEffect, useMemo, useState } from "react"
 import { cn } from "@/lib/utils"
 import { medisynSearchSuggestionId, medisynSearchSuggestions } from "@/lib/search-suggestions"
+import {
+  loadInAppNotifications,
+  markAllInAppNotificationsRead,
+  markInAppNotificationRead,
+  subscribeToInAppNotifications,
+  type InAppNotification,
+} from "@/lib/notifications"
 import { Activity, LayoutDashboard, Users, Sparkles, Search, Bell, Menu, User, Settings, LogOut, HelpCircle, CreditCard, FileSearch, Handshake } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -29,38 +36,6 @@ const navItems = [
   { href: "/connect", label: "Medisyn Connect", icon: Handshake },
   { href: "/report-insights", label: "Report Insights", icon: FileSearch },
   { href: "/ai-insights", label: "AI Insights", icon: Sparkles },
-]
-
-type NavNotification = {
-  id: string
-  title: string
-  detail: string
-  time: string
-  read: boolean
-}
-
-const initialNotifications: NavNotification[] = [
-  {
-    id: "notif-connect-booking",
-    title: "New Connect booking",
-    detail: "A mentorship session request was submitted.",
-    time: "2m ago",
-    read: false,
-  },
-  {
-    id: "notif-data-refresh",
-    title: "Data refreshed",
-    detail: "Latest treatment discussions are available.",
-    time: "12m ago",
-    read: false,
-  },
-  {
-    id: "notif-plan",
-    title: "Plan update",
-    detail: "Your Pro plan billing is up to date.",
-    time: "1d ago",
-    read: true,
-  },
 ]
 
 export function Navigation() {
@@ -120,24 +95,25 @@ export function Navigation() {
   const navAvatarSeed = navProfile?.avatarSeed || "medisyn"
   const navInitials = `${navProfile?.firstName?.[0] ?? "S"}${navProfile?.lastName?.[0] ?? "C"}`
   const navPlanLabel = `${navSubscriptionPlan.toUpperCase()} Plan`
-  const [notifications, setNotifications] = useState<NavNotification[]>(initialNotifications)
+  const [notifications, setNotifications] = useState<InAppNotification[]>([])
   const unreadNotificationCount = notifications.filter((item) => !item.read).length
 
+  useEffect(() => {
+    setNotifications(loadInAppNotifications())
+
+    const unsubscribe = subscribeToInAppNotifications((next) => {
+      setNotifications(next)
+    })
+
+    return unsubscribe
+  }, [])
+
   function markAllNotificationsRead() {
-    setNotifications((current) => current.map((item) => ({ ...item, read: true })))
+    setNotifications(markAllInAppNotificationsRead())
   }
 
   function markNotificationRead(id: string) {
-    setNotifications((current) =>
-      current.map((item) =>
-        item.id === id
-          ? {
-              ...item,
-              read: true,
-            }
-          : item,
-      ),
-    )
+    setNotifications(markInAppNotificationRead(id))
   }
 
   function submitSearch(query: string) {

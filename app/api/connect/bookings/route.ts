@@ -13,10 +13,6 @@ function parseSessionDuration(value: unknown): SessionDuration | null {
   return value === 20 || value === 40 || value === 60 ? value : null
 }
 
-function parsePaymentProvider(value: unknown): "stripe" | "razorpay" | null {
-  return value === "stripe" || value === "razorpay" ? value : null
-}
-
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
@@ -45,13 +41,12 @@ export async function POST(request: NextRequest) {
 
     const sessionType = parseSessionType(body.sessionType)
     const durationMinutes = parseSessionDuration(body.durationMinutes)
-    const paymentProvider = parsePaymentProvider(body.paymentProvider)
 
-    if (!body.mentorId || !sessionType || !durationMinutes || !paymentProvider) {
+    if (!body.mentorId || !sessionType || !durationMinutes) {
       return NextResponse.json(
         {
           ok: false,
-          error: "mentorId, sessionType, durationMinutes, and paymentProvider are required",
+          error: "mentorId, sessionType, and durationMinutes are required",
         },
         { status: 400 },
       )
@@ -65,7 +60,6 @@ export async function POST(request: NextRequest) {
       sessionType,
       durationMinutes,
       scheduledAt: String(body.scheduledAt ?? ""),
-      paymentProvider,
     })
 
     let emailDelivery: { sent: boolean; message: string } = {

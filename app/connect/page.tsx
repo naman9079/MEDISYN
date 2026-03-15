@@ -8,8 +8,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { ShieldCheck, Search, CreditCard, MessageCircle, Phone, Video } from "lucide-react"
+import { ShieldCheck, Search, CalendarCheck2, MessageCircle, Phone, Video } from "lucide-react"
 import { medisynSearchSuggestionId } from "@/lib/search-suggestions"
+import { addInAppNotification } from "@/lib/notifications"
+import { toast } from "@/hooks/use-toast"
 import type { ConnectProPlan, MentorBooking, MentorPriceCard, MentorProfile, SessionType } from "@/lib/connect/types"
 
 type MentorApiResponse = {
@@ -46,10 +48,16 @@ const sessionTypeIcons: Record<SessionType, typeof MessageCircle> = {
   video: Video,
 }
 
+const fixedInrPriceBySession: Record<SessionType, MentorPriceCard> = {
+  chat: { sessionType: "chat", durationMinutes: 20, priceUsd: 199 },
+  audio: { sessionType: "audio", durationMinutes: 40, priceUsd: 299 },
+  video: { sessionType: "video", durationMinutes: 60, priceUsd: 499 },
+}
+
 function formatCurrency(value: number) {
-  return new Intl.NumberFormat("en-US", {
+  return new Intl.NumberFormat("en-IN", {
     style: "currency",
-    currency: "USD",
+    currency: "INR",
     maximumFractionDigits: 0,
   }).format(value)
 }
@@ -68,7 +76,9 @@ function formatDateTime(value: string) {
 }
 
 function getPriceFor(mentor: MentorProfile, sessionType: SessionType): MentorPriceCard | null {
-  return mentor.sessionPrices.find((item) => item.sessionType === sessionType) ?? null
+  const normalized = fixedInrPriceBySession[sessionType]
+  const offered = mentor.sessionPrices.some((item) => item.sessionType === sessionType)
+  return offered ? normalized : null
 }
 
 export default function MedisynConnectPage() {
@@ -84,7 +94,6 @@ export default function MedisynConnectPage() {
   const [patientEmail, setPatientEmail] = useState("namanshukla328@gmail.com")
   const [patientDisease, setPatientDisease] = useState("")
   const [bookingSessionType, setBookingSessionType] = useState<SessionType>("chat")
-  const [paymentProvider, setPaymentProvider] = useState<"stripe" | "razorpay">("stripe")
   const [scheduledAt, setScheduledAt] = useState("")
   const [activeBookingMentorId, setActiveBookingMentorId] = useState<string | null>(null)
 
@@ -136,7 +145,11 @@ export default function MedisynConnectPage() {
   async function handleBookSession(event: React.FormEvent<HTMLFormElement>, mentorIdOverride?: string) {
     event.preventDefault()
 
-    setBookingStatus("Processing payment and booking session...")
+    setBookingStatus("Booking your session...")
+    toast({
+      title: "Booking in progress",
+      description: "Submitting your mentorship session request.",
+    })
 
     const bookingMentorId = mentorIdOverride ?? selectedMentorId
     const bookingMentor = mentors.find((item) => item.id === bookingMentorId)
@@ -155,7 +168,6 @@ export default function MedisynConnectPage() {
         disease: patientDisease,
         sessionType: bookingSessionType,
         durationMinutes,
-        paymentProvider,
         scheduledAt,
       }),
     })
@@ -163,18 +175,48 @@ export default function MedisynConnectPage() {
     const payload = (await response.json()) as BookingApiResponse
 
     if (!response.ok || !payload.ok || !payload.booking) {
-      setBookingStatus(payload.error ?? "Failed to book session")
+      const message = payload.error ?? "Failed to book session"
+      setBookingStatus(message)
+      toast({
+        variant: "destructive",
+        title: "Booking failed",
+        description: message,
+      })
       return
     }
 
-    const bookingMessage = `Session booked with payment confirmed: ${sessionTypeLabels[payload.booking.sessionType]} on ${formatDateTime(payload.booking.scheduledAt)} for ${formatCurrency(payload.booking.amountUsd)}.`
+    const bookingMessage = `Session booked: ${sessionTypeLabels[payload.booking.sessionType]} on ${formatDateTime(payload.booking.scheduledAt)} for ${formatCurrency(payload.booking.amountUsd)}.`
     const emailMessage = payload.emailDelivery
       ? payload.emailDelivery.sent
         ? ` ${payload.emailDelivery.message}`
-        : ` Email not sent yet: ${payload.emailDelivery.message}`
+        : " Email notifications are currently unavailable."
       : ""
 
+    const mentorName = bookingMentor?.name ?? "your mentor"
+    addInAppNotification({
+      title: "Session booked",
+      detail: `${sessionTypeLabels[payload.booking.sessionType]} with ${mentorName} on ${formatDateTime(payload.booking.scheduledAt)}.`,
+    })
+
+    if (payload.emailDelivery && !payload.emailDelivery.sent) {
+      addInAppNotification({
+        title: "Email delivery pending",
+        detail: "Booking is confirmed, but email notifications could not be sent yet.",
+      })
+    }
+
     setBookingStatus(`${bookingMessage}${emailMessage}`)
+    toast({
+      title: "Session booked",
+      description: `${sessionTypeLabels[payload.booking.sessionType]} on ${formatDateTime(payload.booking.scheduledAt)}.`,
+    })
+
+    if (payload.emailDelivery && !payload.emailDelivery.sent) {
+      toast({
+        title: "Email pending",
+        description: "Booking is confirmed, but email notifications are not delivered yet.",
+      })
+    }
 
     setPatientName("")
     setPatientEmail("")
@@ -337,7 +379,7 @@ export default function MedisynConnectPage() {
                         setBookingStatus(null)
                       }}
                     >
-                      <CreditCard className="mr-2 h-4 w-4" />
+                      <CalendarCheck2 className="mr-2 h-4 w-4" />
                       {isBookingOpen ? "Hide Booking" : `Book ${mentor.name.split(" ")[0]}`}
                     </Button>
                   </div>
@@ -367,16 +409,6 @@ export default function MedisynConnectPage() {
                             <SelectItem value="video">Video Session (60 min)</SelectItem>
                           </SelectContent>
                         </Select>
-
-                        <Select value={paymentProvider} onValueChange={(value) => setPaymentProvider(value as "stripe" | "razorpay")}>
-                          <SelectTrigger className="w-full border-border/70 bg-background/85">
-                            <SelectValue placeholder="Payment provider" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="stripe">Stripe</SelectItem>
-                            <SelectItem value="razorpay">Razorpay</SelectItem>
-                          </SelectContent>
-                        </Select>
                       </div>
 
                       <Input
@@ -396,7 +428,7 @@ export default function MedisynConnectPage() {
                       </div>
 
                       <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                        <CreditCard className="mr-2 h-4 w-4" /> Pay And Book Session
+                        <CalendarCheck2 className="mr-2 h-4 w-4" /> Book Session
                       </Button>
 
                       {bookingStatus ? <p className="text-xs text-muted-foreground">{bookingStatus}</p> : null}

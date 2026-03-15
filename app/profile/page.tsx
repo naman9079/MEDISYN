@@ -67,7 +67,7 @@ function emptyProfile(): ProfileSettings {
       billingPeriod: "monthly",
       nextBillingDate: "",
       amount: 0,
-      currency: "USD",
+      currency: "INR",
       autoRenew: true,
     },
     stats: {
@@ -124,6 +124,14 @@ function getPlanAmount(plan: SubscriptionPlan, billingPeriod: BillingPeriod) {
   }
 
   return billingPeriod === "yearly" ? base * 10 : base
+}
+
+function formatInr(value: number) {
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(value)
 }
 
 function getProfileName(profile: ProfileSettings["profile"]) {
@@ -286,6 +294,7 @@ export default function ProfilePage() {
         subscription: {
           ...draftSubscription,
           amount,
+          currency: "INR",
           nextBillingDate,
         },
       },
@@ -757,7 +766,7 @@ export default function ProfilePage() {
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Amount</span>
                       <span className="font-medium text-foreground">
-                        {profileData.subscription.currency} {profileData.subscription.amount}/{profileData.subscription.billingPeriod === "yearly" ? "year" : "month"}
+                        {formatInr(profileData.subscription.amount)}/{profileData.subscription.billingPeriod === "yearly" ? "year" : "month"}
                       </span>
                     </div>
                   </div>

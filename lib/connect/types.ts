@@ -49,8 +49,6 @@ export type MentorBooking = {
   amountUsd: number
   platformCommissionUsd: number
   mentorPayoutUsd: number
-  paymentProvider: "stripe" | "razorpay"
-  paymentStatus: "pending" | "paid"
   status: "scheduled" | "completed" | "cancelled"
   createdAt: string
 }
@@ -88,7 +86,6 @@ export type BookingCreateInput = {
   sessionType: SessionType
   durationMinutes: SessionDuration
   scheduledAt: string
-  paymentProvider: "stripe" | "razorpay"
 }
 
 export type ReviewCreateInput = {

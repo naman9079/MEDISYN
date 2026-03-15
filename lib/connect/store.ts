@@ -16,6 +16,53 @@ const CONNECT_FILE = path.join(process.cwd(), "data", "real", "connect-marketpla
 
 const SESSION_DURATION_OPTIONS = [20, 40, 60] as const
 
+const STANDARD_SESSION_PRICES = {
+  chat: 199,
+  audio: 299,
+  video: 499,
+} as const
+
+const INDIAN_MENTOR_NAME_BY_ID: Record<string, string> = {
+  "mentor-lymphoma-aanya": "Aanya Sharma",
+  "mentor-crohns-rafael": "Rohan Mehta",
+  "mentor-breastcancer-noor": "Noor Fatima",
+  "mentor-hypertension-liam": "Liam Kapoor",
+  "mentor-asthma-priya": "Priya Nair",
+  "mentor-migraine-zoe": "Zoya Malhotra",
+  "mentor-viralfever-omar": "Omar Siddiqui",
+  "mentor-cancer-david": "Devansh Khanna",
+  "mentor-diabetes-elena": "Esha Verma",
+  "mentor-diarrhea-sana": "Sana Farooq",
+  "mentor-cancer-lakshya": "Lakshya Vashishta",
+}
+
+function getStandardSessionPrices() {
+  return [
+    { sessionType: "chat" as const, durationMinutes: 20 as const, priceUsd: STANDARD_SESSION_PRICES.chat },
+    { sessionType: "audio" as const, durationMinutes: 40 as const, priceUsd: STANDARD_SESSION_PRICES.audio },
+    { sessionType: "video" as const, durationMinutes: 60 as const, priceUsd: STANDARD_SESSION_PRICES.video },
+  ]
+}
+
+function normalizeMentorProfile(mentor: MentorProfile): MentorProfile {
+  const normalizedName = INDIAN_MENTOR_NAME_BY_ID[mentor.id] ?? mentor.name
+
+  return {
+    ...mentor,
+    name: normalizedName,
+    country: "India",
+    language: mentor.language?.includes("Hindi") ? mentor.language : "English, Hindi",
+    email:
+      mentor.id === "mentor-cancer-lakshya"
+        ? "shuklanaman9079@gmail.com"
+        : mentor.email && mentor.email.trim().length > 0
+          ? mentor.email
+          : `${normalizedName.toLowerCase().replace(/[^a-z0-9]+/g, ".").replace(/^\.|\.$/g, "")}@medisyn-connect.com`,
+    diseaseRecoveredFrom: normalizeDiseaseCategory(mentor.diseaseRecoveredFrom),
+    sessionPrices: getStandardSessionPrices(),
+  }
+}
+
 function nowIso() {
   return new Date().toISOString()
 }
@@ -68,11 +115,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "India",
         yearsSinceRecovery: 3,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 10 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 20 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 30 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 84,
         averageRating: 4.8,
         reviewCount: 26,
@@ -92,11 +135,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "Brazil",
         yearsSinceRecovery: 4,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 12 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 22 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 34 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 61,
         averageRating: 4.7,
         reviewCount: 18,
@@ -116,11 +155,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "UAE",
         yearsSinceRecovery: 5,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 11 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 21 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 32 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 104,
         averageRating: 4.9,
         reviewCount: 40,
@@ -140,11 +175,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "USA",
         yearsSinceRecovery: 2,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 10 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 19 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 28 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 47,
         averageRating: 4.6,
         reviewCount: 15,
@@ -164,11 +195,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "India",
         yearsSinceRecovery: 3,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 9 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 18 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 27 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 58,
         averageRating: 4.7,
         reviewCount: 19,
@@ -188,11 +215,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "UK",
         yearsSinceRecovery: 2,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 10 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 19 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 29 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 53,
         averageRating: 4.7,
         reviewCount: 17,
@@ -212,11 +235,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "Pakistan",
         yearsSinceRecovery: 2,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 8 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 16 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 24 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 36,
         averageRating: 4.6,
         reviewCount: 12,
@@ -236,11 +255,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "South Korea",
         yearsSinceRecovery: 4,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 12 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 23 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 35 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 79,
         averageRating: 4.8,
         reviewCount: 24,
@@ -260,11 +275,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "Bulgaria",
         yearsSinceRecovery: 3,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 11 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 20 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 31 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 66,
         averageRating: 4.7,
         reviewCount: 22,
@@ -284,11 +295,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "India",
         yearsSinceRecovery: 2,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 9 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 17 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 26 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 42,
         averageRating: 4.6,
         reviewCount: 14,
@@ -308,11 +315,7 @@ function getDefaultConnectData(): ConnectDataStore {
         country: "India",
         yearsSinceRecovery: 2,
         disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
-        sessionPrices: [
-          { sessionType: "chat", durationMinutes: 20, priceUsd: 12 },
-          { sessionType: "audio", durationMinutes: 40, priceUsd: 22 },
-          { sessionType: "video", durationMinutes: 60, priceUsd: 34 },
-        ],
+        sessionPrices: getStandardSessionPrices(),
         totalSessions: 31,
         averageRating: 4.8,
         reviewCount: 11,
@@ -340,7 +343,7 @@ function getDefaultConnectData(): ConnectDataStore {
     config: {
       proPlan: {
         planName: "Medisyn Pro",
-        monthlyUsd: 9,
+        monthlyUsd: 49,
         benefits: ["Unlimited mentor browsing", "Discounted session pricing", "Priority mentor matching"],
       },
       platformCommissionRate: 0.2,
@@ -371,22 +374,32 @@ export async function loadConnectData() {
       parsed.mentors = [...parsed.mentors, ...missingMentors]
     }
 
-    parsed.mentors = parsed.mentors.map((mentor) => ({
-      ...mentor,
-      email:
-        mentor.id === "mentor-cancer-lakshya"
-          ? "shuklanaman9079@gmail.com"
-          : mentor.email && mentor.email.trim().length > 0
-            ? mentor.email
-            : `${mentor.name.toLowerCase().replace(/[^a-z0-9]+/g, ".").replace(/^\.|\.$/g, "")}@medisyn-connect.com`,
-      diseaseRecoveredFrom: normalizeDiseaseCategory(mentor.diseaseRecoveredFrom),
-    }))
+    parsed.mentors = parsed.mentors.map(normalizeMentorProfile)
+
+    parsed.config = {
+      ...parsed.config,
+      proPlan: {
+        ...parsed.config.proPlan,
+        planName: "Medisyn Pro",
+        monthlyUsd: 49,
+      },
+    }
+
+    await ensureFile({
+      ...parsed,
+      updatedAt: nowIso(),
+    })
 
     return parsed
   } catch {
     const fallback = getDefaultConnectData()
-    await ensureFile(fallback)
-    return fallback
+    const normalizedFallback: ConnectDataStore = {
+      ...fallback,
+      mentors: fallback.mentors.map(normalizeMentorProfile),
+      updatedAt: nowIso(),
+    }
+    await ensureFile(normalizedFallback)
+    return normalizedFallback
   }
 }
 
@@ -460,8 +473,8 @@ export async function listMentors(filters: MentorFilter = {}) {
   }
 }
 
-function resolveSessionPrice(mentor: MentorProfile, sessionType: SessionType, durationMinutes: number) {
-  return mentor.sessionPrices.find(
+function resolveSessionPrice(sessionType: SessionType, durationMinutes: number) {
+  return getStandardSessionPrices().find(
     (price) => price.sessionType === sessionType && price.durationMinutes === durationMinutes,
   )
 }
@@ -491,7 +504,7 @@ export async function createBooking(input: BookingCreateInput) {
     throw new Error("Session must be booked for a future time")
   }
 
-  const pricing = resolveSessionPrice(mentor, input.sessionType, input.durationMinutes)
+  const pricing = resolveSessionPrice(input.sessionType, input.durationMinutes)
   if (!pricing) {
     throw new Error("Selected mentor does not offer this session type and duration")
   }
@@ -512,8 +525,6 @@ export async function createBooking(input: BookingCreateInput) {
     amountUsd,
     platformCommissionUsd,
     mentorPayoutUsd,
-    paymentProvider: input.paymentProvider,
-    paymentStatus: "paid",
     status: "scheduled",
     createdAt: nowIso(),
   }
@@ -528,11 +539,6 @@ export async function createBooking(input: BookingCreateInput) {
   return {
     booking,
     mentor,
-    checkout: {
-      provider: input.paymentProvider,
-      status: "simulated-success",
-      message: "Payment simulation complete. Replace with Stripe/Razorpay checkout session in production.",
-    },
   }
 }
 
