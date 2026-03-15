@@ -630,6 +630,8 @@ export default function AIInsightsPage() {
       return
     }
 
+    setDiseaseViewMode("search-ones")
+    setSearchQuery(routeQuery)
     setAnalysisInput(routeQuery)
     void runAnalysis(routeQuery)
   }, [routeQuery])

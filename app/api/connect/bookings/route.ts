@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { createBooking, listBookings } from "@/lib/connect/store"
+import { sendBookingConfirmationEmails } from "@/lib/connect/email"
 import type { BookingCreateInput, SessionDuration, SessionType } from "@/lib/connect/types"
 
 export const runtime = "nodejs"
@@ -56,7 +57,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const booking = await createBooking({
+    const bookingResult = await createBooking({
       mentorId: body.mentorId,
       patientName: String(body.patientName ?? ""),
       patientEmail: String(body.patientEmail ?? ""),
@@ -67,7 +68,24 @@ export async function POST(request: NextRequest) {
       paymentProvider,
     })
 
-    return NextResponse.json({ ok: true, ...booking }, { status: 201 })
+    let emailDelivery: { sent: boolean; message: string } = {
+      sent: true,
+      message: "Booking confirmation emails sent to patient and mentor.",
+    }
+
+    try {
+      await sendBookingConfirmationEmails({
+        booking: bookingResult.booking,
+        mentor: bookingResult.mentor,
+      })
+    } catch (error) {
+      emailDelivery = {
+        sent: false,
+        message: error instanceof Error ? error.message : "Email delivery failed",
+      }
+    }
+
+    return NextResponse.json({ ok: true, ...bookingResult, emailDelivery }, { status: 201 })
   } catch (error) {
     return NextResponse.json(
       {

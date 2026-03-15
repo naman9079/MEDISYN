@@ -21,7 +21,7 @@
   },
   "subscription": {
     "plan": "pro",
-    "status": "active",
+    "status": "canceled",
     "billingPeriod": "monthly",
     "nextBillingDate": "2026-04-15",
     "amount": 49,
@@ -35,6 +35,48 @@
     "accuracyScore": 94.2
   },
   "recentActivity": [
+    {
+      "id": "94ba8043-738c-4e38-a82f-439fbeb804a9",
+      "action": "Canceled subscription",
+      "target": "PRO plan",
+      "type": "subscription",
+      "time": "2026-03-15T03:56:26.504Z"
+    },
+    {
+      "id": "651502da-74b2-4c0c-9a30-8d348b542a85",
+      "action": "Paused subscription",
+      "target": "PRO plan",
+      "type": "subscription",
+      "time": "2026-03-15T03:56:24.751Z"
+    },
+    {
+      "id": "a8093264-f6e0-4af2-ab87-6430d1c1b56e",
+      "action": "Updated subscription",
+      "target": "PRO plan (monthly)",
+      "type": "subscription",
+      "time": "2026-03-15T03:56:22.710Z"
+    },
+    {
+      "id": "e8387d0b-5a4d-48b4-aaf5-1585278cd6bd",
+      "action": "Updated subscription",
+      "target": "PRO plan (monthly)",
+      "type": "subscription",
+      "time": "2026-03-15T03:56:20.861Z"
+    },
+    {
+      "id": "8b43ecce-5c4d-4051-8350-1b12b88480fb",
+      "action": "Reactivated subscription",
+      "target": "PRO plan",
+      "type": "subscription",
+      "time": "2026-03-15T03:56:17.252Z"
+    },
+    {
+      "id": "dc683213-9d49-4159-b220-862058d201d9",
+      "action": "Updated profile",
+      "target": "Account information and contact details",
+      "type": "account",
+      "time": "2026-03-15T03:56:06.777Z"
+    },
     {
       "id": "ca3b97e8-3f18-4d89-8b4e-e1b11e25f09b",
       "action": "Updated profile",
@@ -99,5 +141,5 @@
       "type": "report"
     }
   ],
-  "updatedAt": "2026-03-14T20:13:35.526Z"
+  "updatedAt": "2026-03-15T03:56:26.504Z"
 }

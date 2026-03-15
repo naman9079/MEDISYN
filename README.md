@@ -1,3 +1,21 @@
+## Medisyn Connect booking emails
+
+When a mentorship session is booked, confirmation emails are sent to both:
+
+- the patient (`patientEmail` entered during booking)
+- the booked mentor (mentor profile email)
+
+Configure these environment variables before using booking emails:
+
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `SMTP_FROM`
+- `SMTP_SECURE` (`true` or `false`, optional; defaults to `false`)
+
+If these are missing or invalid, booking API will return an error for email delivery configuration.
+
 # Medisyn
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).

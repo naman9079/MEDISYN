@@ -28,14 +28,16 @@ import {
   ResponsiveContainer,
   BarChart,
   Bar,
-  Tooltip
+  Tooltip,
+  Cell,
+  LabelList
 } from "recharts"
 
 const sideEffectsData = [
-  { name: "Nausea", value: 35 },
-  { name: "Headache", value: 28 },
-  { name: "Fatigue", value: 22 },
-  { name: "Dizziness", value: 15 },
+  { name: "Nausea", value: 35, color: "#0ea5e9" },
+  { name: "Headache", value: 28, color: "#06b6d4" },
+  { name: "Fatigue", value: 22, color: "#14b8a6" },
+  { name: "Dizziness", value: 15, color: "#22c55e" },
 ]
 
 const recoveryData = [
@@ -179,6 +181,24 @@ function deriveRecentTreatments(records: PatientExperience[]): RecentTreatment[]
     .slice(0, 4)
 }
 
+function SideEffectsTooltip({ active, payload }: { active?: boolean; payload?: Array<{ value: number; payload: { name: string; value: number } }> }) {
+  if (!active || !payload || payload.length === 0) {
+    return null
+  }
+
+  const item = payload[0]?.payload
+  if (!item) {
+    return null
+  }
+
+  return (
+    <div className="rounded-xl border border-border/60 bg-card/95 px-3 py-2 shadow-lg backdrop-blur-sm">
+      <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{item.name}</p>
+      <p className="text-sm font-semibold text-foreground">{item.value} reports</p>
+    </div>
+  )
+}
+
 export default function DashboardPage() {
   const router = useRouter()
   const [heroQuery, setHeroQuery] = useState("")
@@ -250,7 +270,13 @@ export default function DashboardPage() {
           </div>
           
           <div className="max-w-2xl mx-auto">
-            <div className="relative group">
+            <form
+              className="relative group"
+              onSubmit={(event) => {
+                event.preventDefault()
+                routeToAnalysis(heroQuery)
+              }}
+            >
               <div className="absolute -inset-1 bg-linear-to-r from-primary/20 via-warm/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500" />
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
@@ -260,22 +286,16 @@ export default function DashboardPage() {
                   placeholder="Search treatment, condition, or symptom..."
                   value={heroQuery}
                   onChange={(event) => setHeroQuery(event.target.value)}
-                  onKeyDown={(event) => {
-                    if (event.key === "Enter") {
-                      event.preventDefault()
-                      routeToAnalysis(heroQuery)
-                    }
-                  }}
                   className="h-14 pl-12 pr-32 text-base rounded-xl border-border/60 bg-card shadow-sm focus-visible:ring-2 focus-visible:ring-primary/30 transition-all duration-300"
                 />
                 <Button
+                  type="submit"
                   className="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg shadow-sm hover:shadow transition-all duration-200"
-                  onClick={() => routeToAnalysis(heroQuery)}
                 >
                   Search
                 </Button>
               </div>
-            </div>
+            </form>
             <div className="flex flex-wrap gap-2 mt-5 justify-center">
               {["Your Disease", "Symptom Pattern", "Treatment Name", "Outcome Trend", "Safety Signal"].map((tag) => (
                 <Badge 
@@ -369,7 +389,7 @@ export default function DashboardPage() {
         {/* Charts Grid */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
           {/* Side Effects Distribution */}
-          <Card className="border-border/40 shadow-sm hover:shadow-md transition-all duration-300">
+          <Card className="border-border/40 bg-linear-to-br from-card via-card to-primary/5 shadow-sm hover:shadow-md transition-all duration-300">
             <CardHeader className="pb-2">
               <div className="flex items-center justify-between">
                 <div>
@@ -382,21 +402,39 @@ export default function DashboardPage() {
               </div>
             </CardHeader>
             <CardContent>
+              <div className="mb-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                {sideEffectsData.map((item) => (
+                  <div key={item.name} className="rounded-lg border border-border/50 bg-background/70 px-2.5 py-2">
+                    <p className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground">{item.name}</p>
+                    <p className="text-sm font-semibold text-foreground">{item.value}</p>
+                  </div>
+                ))}
+              </div>
               <div className="h-64">
                 <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={sideEffectsData} layout="vertical">
-                    <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} stroke="hsl(var(--border))" />
-                    <XAxis type="number" tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }} />
-                    <YAxis dataKey="name" type="category" tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }} width={70} />
-                    <Tooltip 
-                      contentStyle={{ 
-                        backgroundColor: "hsl(var(--card))", 
-                        border: "1px solid hsl(var(--border))",
-                        borderRadius: "12px",
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
-                      }} 
+                  <BarChart data={sideEffectsData} layout="vertical" margin={{ top: 8, right: 24, left: 0, bottom: 0 }} barCategoryGap={14}>
+                    <CartesianGrid strokeDasharray="4 4" horizontal vertical={false} stroke="hsl(var(--border)/0.7)" />
+                    <XAxis
+                      type="number"
+                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                      tickLine={false}
+                      axisLine={false}
                     />
-                    <Bar dataKey="value" fill="hsl(var(--primary))" radius={[0, 6, 6, 0]} />
+                    <YAxis
+                      dataKey="name"
+                      type="category"
+                      tick={{ fill: "hsl(var(--foreground))", fontSize: 13, fontWeight: 500 }}
+                      tickLine={false}
+                      axisLine={false}
+                      width={84}
+                    />
+                    <Tooltip content={<SideEffectsTooltip />} cursor={{ fill: "hsl(var(--primary) / 0.08)" }} />
+                    <Bar dataKey="value" radius={[8, 8, 8, 8]}>
+                      {sideEffectsData.map((entry) => (
+                        <Cell key={entry.name} fill={entry.color} />
+                      ))}
+                      <LabelList dataKey="value" position="right" offset={8} className="fill-foreground text-xs font-semibold" />
+                    </Bar>
                   </BarChart>
                 </ResponsiveContainer>
               </div>

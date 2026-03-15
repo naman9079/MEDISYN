@@ -20,6 +20,7 @@ export type MentorReview = {
 export type MentorProfile = {
   id: string
   name: string
+  email: string
   avatarSeed: string
   diseaseRecoveredFrom: string
   treatmentUsed: string

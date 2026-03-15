@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-15T01:38:15.554Z",
+  "generatedAt": "2026-03-15T01:38:15.501Z",
   "totalItems": 144,
   "sourceCount": 10,
   "successfulSources": 10,
@@ -68,7 +68,7 @@
   ],
   "items": [
     {
-      "id": "639aed73-58c6-4247-bd9b-1fab03320eda",
+      "id": "8988c4bc-6ac4-4049-88bc-599ac4554b19",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -77,7 +77,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rqvxlh/doctors_cant_find_the_cause_of_my_abdominal_pain/",
       "author": "Simon_205",
       "createdAt": "2026-03-11T14:52:34.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -90,7 +90,7 @@
       }
     },
     {
-      "id": "e34f8438-b053-44d7-bfeb-41dbf56a3b64",
+      "id": "291f3496-0af0-45df-a9ac-e14c8191764f",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -99,7 +99,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r24sd5/20m_severe_progressive_gi_symptoms_for_20_months/",
       "author": "Ecstatic_Tear4928",
       "createdAt": "2026-02-11T18:08:59.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -112,7 +112,7 @@
       }
     },
     {
-      "id": "c0261b12-cfba-4906-9236-581ce2f675db",
+      "id": "1ddb02a0-a0a4-446d-bcd6-18486066c83f",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -121,7 +121,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qramv4/decadelong_medical_mystery/",
       "author": "hamsterwheel",
       "createdAt": "2026-01-30T16:43:59.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -134,7 +134,7 @@
       }
     },
     {
-      "id": "406409ac-10f0-437c-8c21-60a37f20f312",
+      "id": "7263638c-58b9-4d77-8242-25c7c7189d27",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -143,7 +143,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qlc98o/52m_in_icu_on_ecmo_impella_after_pancreatitis/",
       "author": "burakscott1",
       "createdAt": "2026-01-24T03:40:10.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -151,12 +151,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 23,
+        "score": 21,
         "numComments": 1
       }
     },
     {
-      "id": "313b57d7-6c8f-4fbc-ab0d-74e0587b1bb1",
+      "id": "626efa63-c0e4-4e58-9f18-0c9f9f46da72",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -165,7 +165,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1q89sm4/24f_i_suspect_liver_issues_bile_duct_problems/",
       "author": "hellaoreos198",
       "createdAt": "2026-01-09T14:32:51.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -178,7 +178,7 @@
       }
     },
     {
-      "id": "9f5c4999-5bbf-4ca6-bb06-f8ef12a7941f",
+      "id": "743c051b-49de-46b7-8d2d-2c90158979e6",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -187,7 +187,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1q6i4g9/1_month_into_pancreatic_cancer_dx_a_week_away/",
       "author": "Apple_Pie_Nutt69",
       "createdAt": "2026-01-07T15:20:25.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -195,12 +195,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 96,
+        "score": 93,
         "numComments": 12
       }
     },
     {
-      "id": "b8833611-1ae7-4172-9328-19eef70e912a",
+      "id": "8983276b-b3cd-47ef-9d0b-85e5cf44ad9f",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -209,7 +209,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1q1bpu2/headacheinducing_numbing_breath_odor_not_hygiene/",
       "author": "No_Employee_8363",
       "createdAt": "2026-01-01T18:51:53.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -222,7 +222,7 @@
       }
     },
     {
-      "id": "e6d87aa8-8a43-4b7e-8115-9282bc97168a",
+      "id": "36c7268e-3679-44f8-90d7-54dcdeb6ea95",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -231,7 +231,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1pzkbto/pain_management_for_pancreatic_cancer/",
       "author": "Ok-Lab-4991",
       "createdAt": "2025-12-30T15:02:44.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -239,12 +239,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 44,
+        "score": 41,
         "numComments": 23
       }
     },
     {
-      "id": "5c5a4cce-11ca-4ec0-9d36-512b74022b44",
+      "id": "3d7f1211-ca7c-4d8b-ba44-37138211df80",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -253,7 +253,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ptnog4/26m_type_1_diabetes_with_epi_enzymes_help/",
       "author": "Over_Foundation11",
       "createdAt": "2025-12-23T07:15:32.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -266,7 +266,7 @@
       }
     },
     {
-      "id": "0a32ea42-ea10-43f5-8500-96486c318cb1",
+      "id": "8d353ce4-15b9-41b3-bda6-b37b0409d5b5",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -275,7 +275,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ptmcg3/gallstones_health_anxiety_and_societal_pressure/",
       "author": "Big-Exit-9755",
       "createdAt": "2025-12-23T05:57:18.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -288,7 +288,7 @@
       }
     },
     {
-      "id": "0172041a-cf51-42ed-9f42-56da1b2ed232",
+      "id": "4cbdb434-3b46-46a0-b757-98be30c60f37",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -297,7 +297,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1phy92y/is_this_as_bad_as_it_sounds/",
       "author": "RecycledThrowaway365",
       "createdAt": "2025-12-09T04:22:24.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -310,7 +310,7 @@
       }
     },
     {
-      "id": "b1869df3-e8e7-4995-8b93-e7b6488f0198",
+      "id": "5b92f623-83b6-4db5-929c-d597c8882459",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -319,7 +319,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1p3z61p/worried_its_pancreatic_cancer/",
       "author": "hgd579",
       "createdAt": "2025-11-22T17:37:38.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -332,7 +332,7 @@
       }
     },
     {
-      "id": "41b10f19-d298-429d-9bf0-0f9a47cae773",
+      "id": "93500550-b7dc-4028-9f03-9f39207dcb4c",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -341,7 +341,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1nnw2vk/23_yo_white_male_57_230lbs_diagnosed_with_ibs_and/",
       "author": "Jmb0804",
       "createdAt": "2025-09-22T19:29:34.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -354,7 +354,7 @@
       }
     },
     {
-      "id": "d8defa72-fe6f-485a-9d3d-4b446555b1f8",
+      "id": "0daf1868-e420-494c-ba29-867f84aa5c96",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -363,7 +363,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1nkd1i5/need_help_with_finding_proper_care/",
       "author": "MadameLucario",
       "createdAt": "2025-09-18T16:29:39.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -376,7 +376,7 @@
       }
     },
     {
-      "id": "8ca2fbbf-c7e4-476d-b9ff-752c0d55d875",
+      "id": "10895bcc-d769-4acc-b42b-e93c713302da",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -385,7 +385,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1mnyt3k/intrathecal_pain_pump/",
       "author": "BP_fedora",
       "createdAt": "2025-08-12T04:09:41.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -398,7 +398,7 @@
       }
     },
     {
-      "id": "a3bffc7e-b7c4-4d8e-bf43-ade3c486e3ad",
+      "id": "97574bf4-5799-475a-ab41-ec3f53db052b",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -407,7 +407,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ma9txp/can_a_severe_respiradone_overdose_in_the_past/",
       "author": "FrequentPurple5511",
       "createdAt": "2025-07-27T01:24:46.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -420,7 +420,7 @@
       }
     },
     {
-      "id": "3824ce6e-a878-4cf3-8f30-ac87deab2f6e",
+      "id": "18cea381-a1b1-44e1-9008-114265aa0476",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -429,7 +429,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1m8s3n7/pain_under_right_rib/",
       "author": "ParkingAd4221",
       "createdAt": "2025-07-25T06:41:26.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -442,7 +442,7 @@
       }
     },
     {
-      "id": "f00e9c41-b6b3-4147-937d-9045483c0c30",
+      "id": "c1053864-1d57-41aa-b921-73fb72f1b8a8",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -451,7 +451,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1m2l0nz/profound_nutrient_wasting_unclear_diagnoses/",
       "author": "TaroProof8443",
       "createdAt": "2025-07-17T22:12:59.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "5c0edaac-e309-4259-b20e-51a94fdcbd2b",
+      "id": "ea5b51b2-111a-4577-a24b-c56d9b19b9ec",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -473,7 +473,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1lm2ab7/i_dont_know_what_to_do_anymore/",
       "author": "Character_Cicada_308",
       "createdAt": "2025-06-27T19:08:23.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -486,7 +486,7 @@
       }
     },
     {
-      "id": "fc2ab204-84d2-435d-9d7b-cb87a5738c67",
+      "id": "04a277c0-4146-4cf7-b939-d544287169af",
       "sourceId": "reddit-pancreatitis",
       "sourceType": "reddit",
       "sourceName": "Pancreatitis Patient Experiences (Reddit)",
@@ -495,7 +495,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1llawmj/repatha_for_extremely_high_triglycerides/",
       "author": "Pigeonofthesea8",
       "createdAt": "2025-06-26T20:34:45.000Z",
-      "collectedAt": "2026-03-15T01:38:15.130Z",
+      "collectedAt": "2026-03-15T01:38:15.030Z",
       "keywords": [
         "Pancreatitis",
         "pancreatitis",
@@ -508,7 +508,7 @@
       }
     },
     {
-      "id": "922655e6-a8ec-4f22-9d0b-15083aba4fa8",
+      "id": "3044d0e7-1da8-4df7-b634-45f79ea20276",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -517,7 +517,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rr3dvu/leftside_rib_to_midback_discomfort/",
       "author": "Sea_Room337",
       "createdAt": "2026-03-11T19:17:43.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -529,7 +529,7 @@
       }
     },
     {
-      "id": "5a8ab372-0e47-4aa4-8f85-11f0f44b4cbc",
+      "id": "fd01dee4-6ad1-431f-9789-e6b4039df33d",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -538,7 +538,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rqio1i/doctors_suggesting_dnr_for_mom_white_surrounding/",
       "author": "Luckyblueace",
       "createdAt": "2026-03-11T03:20:52.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -550,7 +550,7 @@
       }
     },
     {
-      "id": "bf751e51-fb08-4ad7-8971-fccf1e7d3f98",
+      "id": "9295b3f3-ea83-4cfa-a20c-d040090ff34f",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -559,7 +559,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rpnpps/im_afraid_i_have_colon_cancer_21_m/",
       "author": "Cultural-Crab-4059",
       "createdAt": "2026-03-10T04:49:34.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -571,7 +571,7 @@
       }
     },
     {
-      "id": "a0295f3c-c837-4f64-8ce1-5314f2563811",
+      "id": "dc16cfe3-d366-431e-8c92-3a19e92fee70",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -580,7 +580,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rol1se/debilitating_pain_unknown_cause/",
       "author": "GiftOdd4390",
       "createdAt": "2026-03-09T00:13:07.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -592,7 +592,7 @@
       }
     },
     {
-      "id": "c55f68ce-3a34-4fe3-877b-dc551d592b54",
+      "id": "3b92cb9f-66ed-47b5-ba3c-396d4f20de31",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -601,7 +601,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rnezk6/seeking_opinions_about_advanced_squamous_cell/",
       "author": "zenifarok",
       "createdAt": "2026-03-07T16:58:18.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -613,7 +613,7 @@
       }
     },
     {
-      "id": "0847800a-6d22-4a67-bc85-975b0949982a",
+      "id": "e978baff-5999-4773-b8e1-937b430fb886",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -622,7 +622,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rlj4gq/question_about_prostate_mri_and_upcoming_biopsy/",
       "author": "anon7971",
       "createdAt": "2026-03-05T14:32:25.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -634,7 +634,7 @@
       }
     },
     {
-      "id": "f9e3837a-e355-4f94-a53b-43bc8d9cec42",
+      "id": "b2e7a90f-f3ee-4c63-a710-e8b4c1e2d013",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -643,7 +643,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ri7xzn/restarted_5mg_after_2_week_break_feeling_really/",
       "author": "LegMuted9836",
       "createdAt": "2026-03-01T20:22:16.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -655,7 +655,7 @@
       }
     },
     {
-      "id": "f3fe6b06-d59d-42b3-86e7-11e0fb4c419a",
+      "id": "bbfb1239-a391-4cce-b936-23e0e4a27317",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -664,7 +664,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rgknnw/perioral_dermatitis_with_a_history_of_c_diff_help/",
       "author": "zone_flower",
       "createdAt": "2026-02-27T22:13:24.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -676,7 +676,7 @@
       }
     },
     {
-      "id": "215b04dc-0be8-46ee-89a0-725364828cf7",
+      "id": "a58ceab9-3896-4807-a3d2-5959e2876b49",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -685,19 +685,19 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rexl9g/cancer_diagnosis_how_bad_is_it/",
       "author": "Rough_Firefighter496",
       "createdAt": "2026-02-26T02:12:28.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 53,
+        "score": 50,
         "numComments": 5
       }
     },
     {
-      "id": "a97e05af-14db-4466-881e-d983579eea4f",
+      "id": "52c29634-c926-4ae2-8b7f-7c62f5e49743",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -706,19 +706,19 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1reiy06/i_think_i_had_a_seizure_or_a_stroke_please_help/",
       "author": "Kitchen_Importance40",
       "createdAt": "2026-02-25T17:03:13.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 14,
+        "score": 11,
         "numComments": 4
       }
     },
     {
-      "id": "e98f4d49-4532-4fe9-af87-b58f87b394c0",
+      "id": "f97393c6-0e33-48d8-844e-c0d4aff238af",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -727,7 +727,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rcyvu2/any_ideas/",
       "author": "Zealousideal-Top-912",
       "createdAt": "2026-02-24T00:15:58.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -739,7 +739,7 @@
       }
     },
     {
-      "id": "24ee59c7-6e8c-41c2-a018-364b169ccb82",
+      "id": "c2fc229b-4c51-4cb4-bb02-93791fee03ac",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -748,7 +748,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rbw8y9/unexplained_chest_pain_at_my_wits_end/",
       "author": "Xalxa",
       "createdAt": "2026-02-22T20:15:09.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -760,7 +760,7 @@
       }
     },
     {
-      "id": "79787cf2-b3b9-428c-af9a-bda708b9fa18",
+      "id": "40502179-3548-4b57-add2-aeb44cb5ab27",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -769,7 +769,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r6oc1i/hoping_to_try_for_pregnancy_is_this_a_gi_goose/",
       "author": "RachelEatsBacon",
       "createdAt": "2026-02-16T22:36:50.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -781,7 +781,7 @@
       }
     },
     {
-      "id": "f4153dd5-e342-4b34-9336-b2d1a462be37",
+      "id": "093e1b4f-6d43-42bb-b523-1e9534a6e1f1",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -790,7 +790,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r5t4te/hpv_test_vs_regular_paps/",
       "author": "Prestigious_Meat9431",
       "createdAt": "2026-02-15T23:11:30.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -802,7 +802,7 @@
       }
     },
     {
-      "id": "600dd6c0-8e7a-4115-a798-6046fc091bad",
+      "id": "c5b8dc79-7475-4e0a-8ee5-b714769e2d6e",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -811,7 +811,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r5axgt/the_doctors_said_i_have_an_irregular_gallbladder/",
       "author": "TanSoloAqui",
       "createdAt": "2026-02-15T10:00:31.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -823,7 +823,7 @@
       }
     },
     {
-      "id": "d05cce4f-5228-48bb-95e2-b4bd41374888",
+      "id": "fb1a79f3-a911-4557-be88-efb731400a6d",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -832,7 +832,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r24sd5/20m_severe_progressive_gi_symptoms_for_20_months/",
       "author": "Ecstatic_Tear4928",
       "createdAt": "2026-02-11T18:08:59.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "6f87b28a-a499-4e3f-b03e-93a9030f8666",
+      "id": "92f11552-05a6-4d43-88e6-21982dc009ef",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -853,7 +853,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r1f169/risperidone_and_menstruation/",
       "author": "momwantstoweld",
       "createdAt": "2026-02-10T22:15:20.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -865,7 +865,7 @@
       }
     },
     {
-      "id": "7c0b8727-c925-48e1-8b8c-46956270afee",
+      "id": "398adda8-751f-4c4d-af2f-8d96a932c1ec",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -874,7 +874,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r1erip/trouble_swallowing_headache_after_first_suboxone/",
       "author": "Brief_Stick_4078",
       "createdAt": "2026-02-10T22:04:59.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -886,7 +886,7 @@
       }
     },
     {
-      "id": "b3eb8bd4-708f-4725-af84-0202f050d065",
+      "id": "ca3751d6-1fae-4346-9a7f-9d875537be98",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -895,7 +895,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r159tt/are_my_symptoms_normal_my_labs_are_normal/",
       "author": "Expensive_Trash_2416",
       "createdAt": "2026-02-10T16:22:55.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -907,7 +907,7 @@
       }
     },
     {
-      "id": "bde1a740-7d3d-47fd-b217-b05d52f52b05",
+      "id": "82e20a81-4b47-432d-b85d-335286cde8b0",
       "sourceId": "reddit-cancer",
       "sourceType": "reddit",
       "sourceName": "Cancer Patient Experiences (Reddit)",
@@ -916,7 +916,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r0t9cm/lithium_drug_interaction/",
       "author": "aunty_frank",
       "createdAt": "2026-02-10T06:21:41.000Z",
-      "collectedAt": "2026-03-15T01:38:15.139Z",
+      "collectedAt": "2026-03-15T01:38:15.496Z",
       "keywords": [
         "Cancer",
         "cancer"
@@ -928,7 +928,7 @@
       }
     },
     {
-      "id": "72900c21-e7de-4485-bcad-63df0336695d",
+      "id": "07e54967-21b3-4edd-9a2d-caba5075a1b1",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -937,7 +937,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rtt8nm/incessant_cough_fatigue/",
       "author": "lubickjonathan",
       "createdAt": "2026-03-14T19:59:47.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -949,7 +949,7 @@
       }
     },
     {
-      "id": "49325d70-0e59-4b46-8060-4fe1dedbecc5",
+      "id": "d93d5c97-f3af-41ce-a941-8e43a62253a7",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -958,7 +958,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1roeh6v/random_dizziness_and_tiny_bits_of_red_in_phlegm/",
       "author": "jadethenon-binarybee",
       "createdAt": "2026-03-08T19:48:44.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -970,7 +970,7 @@
       }
     },
     {
-      "id": "2781ae9f-7789-4f37-bbdc-be2655275dde",
+      "id": "ef641666-23ef-4f2a-9902-a829a4c12c8d",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -979,7 +979,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ro746v/heart_rhythm_is_this_normal/",
       "author": "Complete_Role_7263",
       "createdAt": "2026-03-08T15:05:36.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -991,7 +991,7 @@
       }
     },
     {
-      "id": "b4f89c47-112e-4337-96d9-193ec0e6212a",
+      "id": "486d34f1-cd9b-474a-9366-5824a330c5f7",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1000,7 +1000,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rkfgj7/please_help_my_mother/",
       "author": "PissedEnvironmental",
       "createdAt": "2026-03-04T07:49:14.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1012,7 +1012,7 @@
       }
     },
     {
-      "id": "0e9dd79b-029f-4173-83b7-ebb92d289ae5",
+      "id": "72a64d57-8c88-4840-8f4b-d70a0a9336a0",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1021,7 +1021,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ri2njc/stimulants_and_chronic_pain/",
       "author": "Graxbowxski",
       "createdAt": "2026-03-01T17:07:28.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1033,7 +1033,7 @@
       }
     },
     {
-      "id": "4faa6449-c40a-4e3b-bc2a-856d670da305",
+      "id": "02b0d0e1-1b9c-4733-8fe8-879092119b46",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1042,7 +1042,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rhh2ms/poor_circulation/",
       "author": "Cute_Aspect7438",
       "createdAt": "2026-02-28T23:13:36.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1054,7 +1054,7 @@
       }
     },
     {
-      "id": "6ffd6921-07b5-480e-9715-e2e17fc81da3",
+      "id": "06673c89-e876-4682-89e2-a2d86905f8a8",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1063,7 +1063,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rgmjul/asthma_an_pneumonia/",
       "author": "Rogue_Libra61",
       "createdAt": "2026-02-27T23:29:21.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1075,7 +1075,7 @@
       }
     },
     {
-      "id": "80334529-cf7b-4551-8d11-effbcd43c01d",
+      "id": "3e48fc93-c1f4-4143-be48-7565b3b4e2fe",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1084,19 +1084,19 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rb3v1f/electrical_current_feeling_throughout_whole_body/",
       "author": "sarahbagel",
       "createdAt": "2026-02-21T22:01:28.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 6,
+        "score": 8,
         "numComments": 10
       }
     },
     {
-      "id": "1a2ea11b-45a8-4373-89e2-f63062ad56ac",
+      "id": "2f3f024d-d55b-45b9-b6f9-a9820ae8ef85",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1105,7 +1105,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r8oxsl/can_someone_shed_some_light_on_why_my/",
       "author": "Nickthedick3",
       "createdAt": "2026-02-19T03:55:20.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1117,7 +1117,7 @@
       }
     },
     {
-      "id": "0bc31ef8-c4ec-42e1-81bf-bf5e730309da",
+      "id": "97dceace-078d-4368-97a5-6c5fe8e2e43f",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1126,7 +1126,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r7sdol/can_you_take_losartan_potassium_with_hydroxyzine/",
       "author": "Business86",
       "createdAt": "2026-02-18T03:44:45.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1138,7 +1138,7 @@
       }
     },
     {
-      "id": "4ee06272-3cde-45df-8419-529b8c935eba",
+      "id": "0f4da510-c6a1-4a5b-a88e-5a211e7c2109",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1147,7 +1147,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r31jrp/i_cant_eat_anything_and_i_dont_know_what_to_do/",
       "author": "xavibezz",
       "createdAt": "2026-02-12T18:38:51.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1159,7 +1159,7 @@
       }
     },
     {
-      "id": "96332be4-5fd7-45c3-bb13-e6af3cdb7b0c",
+      "id": "63ac9f6c-9563-41bf-a1f6-b183ebad3563",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1168,7 +1168,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r1j157/high_levels_of_alp_have_apparently_been_high_for/",
       "author": "independence15",
       "createdAt": "2026-02-11T00:58:44.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1180,7 +1180,7 @@
       }
     },
     {
-      "id": "24a321e5-31ea-4c99-b20d-429f52b559cd",
+      "id": "c8bb8c4c-91cc-4304-8c73-6641464eac50",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1189,7 +1189,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qyo9x9/possible_misdiagnosis/",
       "author": "NecroticKnightmare",
       "createdAt": "2026-02-07T20:21:02.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "id": "52553d2f-0424-4d8c-aba7-67afce27c399",
+      "id": "0d5f2340-a209-49fe-ad0c-90127d12e0c2",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1210,7 +1210,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qyk58r/recurrent_episodic_rashes_intense_foot/",
       "author": "NappingNoodle02",
       "createdAt": "2026-02-07T17:42:38.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1222,7 +1222,7 @@
       }
     },
     {
-      "id": "272a5196-a936-41fa-be08-bcbe6877074e",
+      "id": "233e3757-c67e-4468-b37c-9fd497b306f2",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1231,7 +1231,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qy77hw/is_it_possible_to_have_a_drug_sensitivity_thats/",
       "author": "Downtown_Yam7340",
       "createdAt": "2026-02-07T07:09:36.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "id": "ce9dced2-070c-4f11-b0b3-f682f601d13d",
+      "id": "61199b5d-c482-401c-aaa0-3be8a8b2fe0d",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1252,7 +1252,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qttpyz/adhd_medication_interactions_with_current_meds/",
       "author": "Bivagial",
       "createdAt": "2026-02-02T12:28:32.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "id": "9e010e2e-f253-42d3-be93-214e2a9e1c66",
+      "id": "56c89756-3763-478c-a51f-8a37a385d5a4",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1273,7 +1273,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qt2uo4/lamotrigine_question/",
       "author": "vulcanfeminist",
       "createdAt": "2026-02-01T16:23:02.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1285,7 +1285,7 @@
       }
     },
     {
-      "id": "b81245bd-e952-4bf9-a143-0f991a2e904b",
+      "id": "934b5f64-301f-4819-a5d9-a58857c19dfa",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1294,7 +1294,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qspo8p/we_got_tear_gassed_today_and_we_are_trying_to/",
       "author": "Liv_Laugh_Lasagna",
       "createdAt": "2026-02-01T05:26:12.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1306,7 +1306,7 @@
       }
     },
     {
-      "id": "3fef30f1-e4d3-42c2-8c43-6d552314a2a5",
+      "id": "c65d6abb-7969-4086-81a6-28ce9a40888f",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1315,7 +1315,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qrcs0y/32m_lasting_ed_and_low_libido_after_medication/",
       "author": "DeerOnARoof",
       "createdAt": "2026-01-30T17:58:29.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1327,7 +1327,7 @@
       }
     },
     {
-      "id": "650e21b5-0e4c-4d53-acd0-df72a6514424",
+      "id": "5e49848b-4b17-4a24-8eff-e041516570e5",
       "sourceId": "reddit-asthma",
       "sourceType": "reddit",
       "sourceName": "Asthma Patient Experiences (Reddit)",
@@ -1336,7 +1336,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qpx2jx/cross_posted_in_rasthma_please_help_me/",
       "author": "Sweaty_Dot4539",
       "createdAt": "2026-01-29T03:15:41.000Z",
-      "collectedAt": "2026-03-15T01:38:15.429Z",
+      "collectedAt": "2026-03-15T01:38:15.441Z",
       "keywords": [
         "Asthma",
         "asthma"
@@ -1348,7 +1348,7 @@
       }
     },
     {
-      "id": "17f19e19-2f10-4ad6-bc68-05d806b557ea",
+      "id": "97e601ec-db54-4755-8577-8408eaa62275",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1357,7 +1357,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rta3i9/presyncope_at_night_shifts_new_pvcs_at_medication/",
       "author": "DanielaChris",
       "createdAt": "2026-03-14T04:36:46.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1370,7 +1370,7 @@
       }
     },
     {
-      "id": "a85cccf7-d0b7-496e-9e96-783ffe7431b5",
+      "id": "97a15fd1-23da-4c53-9074-6d4166d5d88e",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1379,7 +1379,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rt5zvs/had_mri_of_brain_today_does_the_narrative_sound_ok/",
       "author": "No_Collar_5131",
       "createdAt": "2026-03-14T01:19:53.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1392,7 +1392,7 @@
       }
     },
     {
-      "id": "d17cea66-a501-445f-b5a0-cb93538d95db",
+      "id": "7012ea5f-4acb-401a-bd9c-052e08b0fc4c",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1401,7 +1401,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rt5wz9/marijuana_suddenly_having_no_effects/",
       "author": "stillotyourfriend",
       "createdAt": "2026-03-14T01:16:17.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1414,7 +1414,7 @@
       }
     },
     {
-      "id": "e7333aed-a889-4dc4-a23f-4dcbf086ee63",
+      "id": "9d97bb25-a298-41c9-a3b0-6542b96273e9",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1423,7 +1423,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rseog6/how_do_i_just_take_the_medication_the_doctors/",
       "author": "QuitTypical3210",
       "createdAt": "2026-03-13T05:23:53.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1436,7 +1436,7 @@
       }
     },
     {
-      "id": "54b419d0-d1e5-4012-bf17-ea274903efec",
+      "id": "8feb0db6-c1c2-42e2-bd7a-c05211c452db",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1445,7 +1445,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rqft16/daily_headaches_for_12_weeks_now_history_of/",
       "author": "disaster_b1",
       "createdAt": "2026-03-11T01:13:01.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1458,7 +1458,7 @@
       }
     },
     {
-      "id": "8cf83f3f-7a91-479a-a4cc-a0aeeb5249b0",
+      "id": "2dd96d4e-84ab-4af9-a5d8-f6eb5ddeec7e",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1467,7 +1467,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rpun7j/headache_for_2_months_looking_for_guidance_ideas/",
       "author": "OneWingedAngelV",
       "createdAt": "2026-03-10T11:42:39.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1480,7 +1480,7 @@
       }
     },
     {
-      "id": "94d181f3-4fab-4584-86c5-7e586e05bb42",
+      "id": "3cbe2322-e86c-4c9b-a6b3-b09d11e9653b",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1489,7 +1489,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rol1se/debilitating_pain_unknown_cause/",
       "author": "GiftOdd4390",
       "createdAt": "2026-03-09T00:13:07.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1502,7 +1502,7 @@
       }
     },
     {
-      "id": "78ee25f2-40d5-47b3-b7f4-f4ef22e3007b",
+      "id": "79db31be-066c-4b5f-82c7-eba6e67c1278",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1511,7 +1511,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1roh2km/recurring_spells_of_dry_mouth_for_last_2_months/",
       "author": "infinit_EEE",
       "createdAt": "2026-03-08T21:29:40.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "id": "0e5e27d1-fa08-4497-8fe0-607e06924606",
+      "id": "06f8b981-9e15-419f-995b-703baad89fab",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1533,7 +1533,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1roeh6v/random_dizziness_and_tiny_bits_of_red_in_phlegm/",
       "author": "jadethenon-binarybee",
       "createdAt": "2026-03-08T19:48:44.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1546,7 +1546,7 @@
       }
     },
     {
-      "id": "97bf6d7f-4b04-4888-b7bf-b627b68945f3",
+      "id": "155662d7-300e-4be9-8a81-d6a322c3a7bb",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1555,7 +1555,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rnjmxk/does_it_get_better/",
       "author": "AyDub1234",
       "createdAt": "2026-03-07T19:56:47.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1568,7 +1568,7 @@
       }
     },
     {
-      "id": "9372867d-2f21-4536-be87-a2ed32c7cec7",
+      "id": "2860e48c-8684-468b-be41-05cdf7a1ea84",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1577,7 +1577,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rlz13e/is_there_a_reason_topicaltransdermal_oestrogen_is/",
       "author": "VisibleAd9353",
       "createdAt": "2026-03-06T00:34:37.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1590,7 +1590,7 @@
       }
     },
     {
-      "id": "0659bfd7-8324-4135-ab2a-04c2ac97bdba",
+      "id": "9c1c24ff-37b8-420e-a231-bfc1840bf116",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1599,7 +1599,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rl95v6/24f_persistent_brain_fog_dizziness_ear_fullness/",
       "author": "Coastal-Clarity-0217",
       "createdAt": "2026-03-05T05:29:44.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1612,7 +1612,7 @@
       }
     },
     {
-      "id": "8894a1e8-ade9-41ec-83b4-1e6fcd1772f0",
+      "id": "ee523112-6ebd-436b-88bb-4ff5441ccad8",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1621,7 +1621,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1risa84/29f_sudden_consistent_pain_in_all_distal/",
       "author": "DillyWillyGirl",
       "createdAt": "2026-03-02T13:04:56.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1634,7 +1634,7 @@
       }
     },
     {
-      "id": "6b36608d-e673-4720-b1b5-e31be1103bf6",
+      "id": "813a7737-0441-4fa5-a0ef-845d3397fe22",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1643,7 +1643,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ri5j13/blurred_vision_with_insane_pressure_in_one_eye/",
       "author": "Naive-Preparation257",
       "createdAt": "2026-03-01T18:53:00.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1656,7 +1656,7 @@
       }
     },
     {
-      "id": "3992c174-1e5b-48d1-895d-dabe2a4ca0da",
+      "id": "3aa72999-1fca-42fa-9770-46780b596b3e",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1665,7 +1665,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ree4vz/mri_question_12_yo_daughter_w_headaches/",
       "author": "ExactReport691",
       "createdAt": "2026-02-25T14:06:37.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1678,7 +1678,7 @@
       }
     },
     {
-      "id": "df781bda-3bb5-45cc-adfb-08b1c9dd9a56",
+      "id": "9191d952-ad4f-420a-a957-a5004a7872ac",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1687,7 +1687,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rd09im/my_periods_last_months_doctors_in_my_area_cant/",
       "author": "PresentationLegal566",
       "createdAt": "2026-02-24T01:08:33.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1700,7 +1700,7 @@
       }
     },
     {
-      "id": "b08b73f7-69cb-4142-961a-f91711b3b8e7",
+      "id": "aea49566-309a-4f30-887e-f69ad59729f2",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1709,7 +1709,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rcr3pk/daily_migraines_advice/",
       "author": "Pretend_Plantain_779",
       "createdAt": "2026-02-23T19:24:03.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1717,12 +1717,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 8,
+        "score": 9,
         "numComments": 4
       }
     },
     {
-      "id": "53d814ce-c546-4f84-8e2b-6e94271bde2e",
+      "id": "0c25c27f-82b5-42e0-94d7-9225f14569cd",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1731,7 +1731,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ragx7u/33_year_old_hypogonadic_male/",
       "author": "Veltrazz",
       "createdAt": "2026-02-21T03:52:08.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1744,7 +1744,7 @@
       }
     },
     {
-      "id": "08fec8da-5763-4e5b-b98b-2b429a9c0f14",
+      "id": "c94df351-3dba-4de7-b198-839508460466",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1753,7 +1753,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1raerr9/confused_on_mri_findings/",
       "author": "thatgirlishoisin",
       "createdAt": "2026-02-21T02:08:19.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1766,7 +1766,7 @@
       }
     },
     {
-      "id": "a55d5df3-142d-4180-a816-d6ae894680e9",
+      "id": "2c9a8e61-7d86-4c05-94b6-133aa421cd70",
       "sourceId": "reddit-migraine",
       "sourceType": "reddit",
       "sourceName": "Migraine Patient Experiences (Reddit)",
@@ -1775,7 +1775,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r9kj0p/daughter_headaches_nausea_and_back_pain_for_6/",
       "author": "darkwing_civic",
       "createdAt": "2026-02-20T03:31:45.000Z",
-      "collectedAt": "2026-03-15T01:38:15.417Z",
+      "collectedAt": "2026-03-15T01:38:15.406Z",
       "keywords": [
         "Migraine",
         "migraine",
@@ -1788,7 +1788,7 @@
       }
     },
     {
-      "id": "433ddf87-a6fb-47e0-80a8-5d7e5571f1e1",
+      "id": "9af2c1bb-5bff-4038-a11c-92c1f74a2965",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1797,7 +1797,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rtp9xf/new_rx_for_metoprolol_for_mild_hypertension/",
       "author": "Qua-something",
       "createdAt": "2026-03-14T17:25:37.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -1813,7 +1813,7 @@
       }
     },
     {
-      "id": "8ebe559d-17ff-480b-9d94-cd9a343e8960",
+      "id": "5d2b4e48-c2e8-4442-bc04-800ef94d1c37",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1822,7 +1822,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rteokf/35m_lada_diabetes_gave_syndrome_very_high_liver/",
       "author": "Upstairs_Suspect_336",
       "createdAt": "2026-03-14T09:06:30.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -1838,7 +1838,7 @@
       }
     },
     {
-      "id": "dc696ee6-817f-4a58-bd5f-40989f8cfed1",
+      "id": "4351bb1b-f4b1-42f1-a804-05cea8572b77",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1847,7 +1847,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rsipn7/complete_absence_of_serotonin_syndrome_does_this/",
       "author": "SarahC",
       "createdAt": "2026-03-13T09:31:29.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -1863,7 +1863,7 @@
       }
     },
     {
-      "id": "9b6e74b8-4470-4980-921f-5e4370d7c9c5",
+      "id": "67412408-b8bc-4442-8136-cd5accd1ecd6",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1872,7 +1872,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rqea1g/is_zepbound_safe_for_me/",
       "author": "wombatgeneral",
       "createdAt": "2026-03-11T00:08:49.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -1888,7 +1888,7 @@
       }
     },
     {
-      "id": "4cc424d1-4f99-40be-9a25-607db4059fe2",
+      "id": "e80e6423-9468-4e18-b951-037fb85b3944",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1897,7 +1897,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ropbab/medication_question/",
       "author": "BundyGirl718",
       "createdAt": "2026-03-09T03:25:22.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -1913,7 +1913,7 @@
       }
     },
     {
-      "id": "15418f04-1b1e-414b-aedd-b7d775c06e8e",
+      "id": "f7b090bf-e635-449f-a965-17b1ce934d13",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1922,7 +1922,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ro746v/heart_rhythm_is_this_normal/",
       "author": "Complete_Role_7263",
       "createdAt": "2026-03-08T15:05:36.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -1938,7 +1938,7 @@
       }
     },
     {
-      "id": "20ddcbe9-e79a-4362-a721-16dee0120e04",
+      "id": "9ccff0ed-fc86-47c0-ba84-6f65dc35e033",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1947,7 +1947,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rlwn6j/isotretinoin_and_being_upside_down_intracranial/",
       "author": "nachtlibelle",
       "createdAt": "2026-03-05T22:57:47.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -1963,7 +1963,7 @@
       }
     },
     {
-      "id": "9e6676f6-241b-4850-b768-84d82384bc48",
+      "id": "7592f9f3-73b5-4eb4-85d4-2cdee9a07fa7",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1972,7 +1972,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rkniqa/combined_flu_a_flu_b_covid_rsv_test_for_upcoming/",
       "author": "karluvmost",
       "createdAt": "2026-03-04T14:55:02.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -1988,7 +1988,7 @@
       }
     },
     {
-      "id": "b36fcf0e-8ee5-4209-98b8-412d63dfec8e",
+      "id": "b69133b2-69a0-4a67-9d19-6c81ff0971bb",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -1997,7 +1997,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rk07ku/nose_cauterised_questions/",
       "author": "ChipmunkIll7714",
       "createdAt": "2026-03-03T20:17:34.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2013,7 +2013,7 @@
       }
     },
     {
-      "id": "09b1fb8b-26ba-48de-875d-7d7fdd36a867",
+      "id": "b1fd8acb-9a9b-471a-a692-529731436e6b",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2022,7 +2022,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rgu08i/what_problem_do_i_have_my_health_has_been_bad_for/",
       "author": "Shana6464",
       "createdAt": "2026-02-28T05:16:27.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2038,7 +2038,7 @@
       }
     },
     {
-      "id": "f0867f09-1dfc-4304-9fef-b842831cda04",
+      "id": "939365c9-94e1-473e-9b3b-890ebf76a96e",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2047,7 +2047,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rf9tv3/f61_gum_swelling/",
       "author": "ComposerOk5329",
       "createdAt": "2026-02-26T13:13:50.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2063,7 +2063,7 @@
       }
     },
     {
-      "id": "7d98943a-6ddd-4cc5-8296-a2ef5a0f9ba7",
+      "id": "97bc033a-41ee-4777-9e3c-c930c3068d2d",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2072,7 +2072,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rcm2tg/high_blood_pressure_readings_birth_control/",
       "author": "ArdentArwen",
       "createdAt": "2026-02-23T16:28:20.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2088,7 +2088,7 @@
       }
     },
     {
-      "id": "d1db1246-683d-4bd5-9752-06fe57ad9d39",
+      "id": "a484701e-af67-4144-972f-944b9eb09288",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2097,7 +2097,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1raxanx/managing_hypertension_with_vasodilation/",
       "author": "Awkward_Profile_7544",
       "createdAt": "2026-02-21T17:39:48.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2113,7 +2113,7 @@
       }
     },
     {
-      "id": "f76a5d37-4829-4d7b-9745-8dc0aa31c66a",
+      "id": "672ac5a9-e896-418e-abae-78c8e4ae1fed",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2122,7 +2122,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1raerr9/confused_on_mri_findings/",
       "author": "thatgirlishoisin",
       "createdAt": "2026-02-21T02:08:19.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2138,7 +2138,7 @@
       }
     },
     {
-      "id": "1a314562-ef49-4274-bd05-00c384065f92",
+      "id": "ba546581-fddc-4e0e-b0a5-f5a06eb90fd6",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2147,7 +2147,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ra2z0h/feeling_really_uncomfortable_about_new_medication/",
       "author": "dietpeachysoda",
       "createdAt": "2026-02-20T18:16:01.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2163,7 +2163,7 @@
       }
     },
     {
-      "id": "bd6c3cda-fb1c-40b8-9534-e777ef2af3c6",
+      "id": "994095f6-b2d9-443d-88f1-de714e7fceda",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2172,7 +2172,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r9oeq3/19m_cervical_instability/",
       "author": "Tall-Bat9853",
       "createdAt": "2026-02-20T06:56:43.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2188,7 +2188,7 @@
       }
     },
     {
-      "id": "0002c162-a8c7-4dbb-b72c-ab91da38bea9",
+      "id": "aafed008-a6ef-4045-af28-ce8e32733806",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2197,7 +2197,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r9iusn/smoke_chemical_inhalation_burning_in_chest_and/",
       "author": "Delirium1212",
       "createdAt": "2026-02-20T02:14:03.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2213,7 +2213,7 @@
       }
     },
     {
-      "id": "32e3dbf7-36cb-4b60-a7fc-a85fa46d6acc",
+      "id": "61f05692-ef6c-4bff-8af3-d80dcdfaf32d",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2222,7 +2222,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r7sdol/can_you_take_losartan_potassium_with_hydroxyzine/",
       "author": "Business86",
       "createdAt": "2026-02-18T03:44:45.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2238,7 +2238,7 @@
       }
     },
     {
-      "id": "9f59741a-db94-4989-91fb-a30c42174316",
+      "id": "a5425980-ccf0-444b-8df5-825e59143543",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2247,7 +2247,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r64ezb/white_coat_pressure/",
       "author": "ExcellentPlenty5505",
       "createdAt": "2026-02-16T08:41:36.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2263,7 +2263,7 @@
       }
     },
     {
-      "id": "64c32fc9-e420-4e4e-befa-117d5ed3f02b",
+      "id": "9be313da-b769-40d2-a69f-a3ba1dd5d05a",
       "sourceId": "reddit-hypertension",
       "sourceType": "reddit",
       "sourceName": "Hypertension Patient Experiences (Reddit)",
@@ -2272,7 +2272,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r5ra88/postconcussion_or_chronic_migraine_12_months_of/",
       "author": "Koarsse",
       "createdAt": "2026-02-15T21:55:09.000Z",
-      "collectedAt": "2026-03-15T01:38:15.018Z",
+      "collectedAt": "2026-03-15T01:38:15.386Z",
       "keywords": [
         "Hypertension",
         "hypertension",
@@ -2288,7 +2288,7 @@
       }
     },
     {
-      "id": "4daec736-a346-4d72-b147-4d5f433ed10f",
+      "id": "7b1a1e92-cc60-430f-b06e-bd7cbe5c004c",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2297,7 +2297,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rj9v1u/how_much_magnesium_is_safe/",
       "author": "Zyxwvutsrq10",
       "createdAt": "2026-03-03T00:05:24.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2313,7 +2313,7 @@
       }
     },
     {
-      "id": "8e68803b-9555-45ca-8975-6a03895cf43f",
+      "id": "de29dd2f-936b-45e7-a3ef-8a52366e2729",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2322,7 +2322,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rhjn51/how_to_ask_for_more_help_with_pain_without/",
       "author": "Major-Damage173",
       "createdAt": "2026-03-01T01:06:15.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2338,7 +2338,7 @@
       }
     },
     {
-      "id": "12d379e3-21ad-429f-a763-6b0494534d32",
+      "id": "f7b0de0d-3d01-4595-bbab-562fb54331a5",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2347,7 +2347,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rf9tv3/f61_gum_swelling/",
       "author": "ComposerOk5329",
       "createdAt": "2026-02-26T13:13:50.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2363,7 +2363,7 @@
       }
     },
     {
-      "id": "a47da749-ed80-4cdd-aaee-4630153855c2",
+      "id": "1485e72b-596d-4a0d-a44c-086cffd5431b",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2372,7 +2372,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1rbkyhl/low_blood_pressure_concern/",
       "author": "unoeyedwillie",
       "createdAt": "2026-02-22T12:44:35.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2388,7 +2388,7 @@
       }
     },
     {
-      "id": "20039073-436d-4ca2-af12-fb102b8d0f30",
+      "id": "f6b76c68-0280-405e-8b78-f15d8cdf1384",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2397,7 +2397,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1raw4k0/will_i_need_to_go_to_the_hospital_after_admitting/",
       "author": "Sensitive-Collar-770",
       "createdAt": "2026-02-21T16:55:42.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2408,12 +2408,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 9,
+        "score": 8,
         "numComments": 10
       }
     },
     {
-      "id": "fc101475-82f2-4378-b5fd-12d93dc006db",
+      "id": "645d518d-8826-4f7d-ac91-b3eb734eec30",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2422,7 +2422,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1ra2z0h/feeling_really_uncomfortable_about_new_medication/",
       "author": "dietpeachysoda",
       "createdAt": "2026-02-20T18:16:01.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2438,7 +2438,7 @@
       }
     },
     {
-      "id": "9362e329-e229-4553-8694-e239c9447639",
+      "id": "97ba3353-7c72-4843-826c-14be388a9c8c",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2447,7 +2447,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r7x9t7/33m_ibuprofen_and_antibiotics_destroyed_my_life_i/",
       "author": "Proud_Dentist9493",
       "createdAt": "2026-02-18T08:12:17.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2463,7 +2463,7 @@
       }
     },
     {
-      "id": "704f5a7f-1e8b-4f42-a6db-db8e8efc002c",
+      "id": "38183b53-e984-4651-b213-2cbc57654d1c",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2472,7 +2472,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r556mp/ideas_for_where_to_look_next/",
       "author": "Ecstatic_Network_317",
       "createdAt": "2026-02-15T04:19:04.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2488,7 +2488,7 @@
       }
     },
     {
-      "id": "7ad5d045-781a-40ed-ba67-71bb4d2fe21c",
+      "id": "329267f8-a7b8-419c-b865-cbdc107dfa52",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2497,7 +2497,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r4p1qo/bacteremia_rocephin_dizziness_hypotension_help/",
       "author": "Sea-Percentage-5279",
       "createdAt": "2026-02-14T16:33:02.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2513,7 +2513,7 @@
       }
     },
     {
-      "id": "01df825f-1532-440b-8252-9c01a023878a",
+      "id": "9fb38fab-a8e5-4a53-827a-7f6b245d09eb",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2522,7 +2522,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r4aom2/whats_going_on/",
       "author": "Motor_Mood3939",
       "createdAt": "2026-02-14T04:07:14.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2538,7 +2538,7 @@
       }
     },
     {
-      "id": "06946ea0-b0a6-4f7c-9e83-0b3465ab7138",
+      "id": "462e2e96-0984-43c7-b11e-3d4bb1ecdcf7",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2547,7 +2547,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1r24sd5/20m_severe_progressive_gi_symptoms_for_20_months/",
       "author": "Ecstatic_Tear4928",
       "createdAt": "2026-02-11T18:08:59.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2563,7 +2563,7 @@
       }
     },
     {
-      "id": "d825e62a-9353-4e6f-9772-4479ad645091",
+      "id": "cad1815f-5f62-4dcb-a772-30da54ff3f2c",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2572,7 +2572,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qzsd9y/age_is_just_a_number_a_question_about_dnrs/",
       "author": "SpeakerCareless",
       "createdAt": "2026-02-09T02:43:00.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2588,7 +2588,7 @@
       }
     },
     {
-      "id": "8571f88a-3313-4c44-9584-3984807ef216",
+      "id": "e63f068d-2294-49b2-9b17-bce128765365",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2597,7 +2597,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qxu0dr/restrictive_eating_resulted_in_constipation_and/",
       "author": "Sensitive-Collar-770",
       "createdAt": "2026-02-06T21:09:33.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2608,12 +2608,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 0,
+        "score": 1,
         "numComments": 43
       }
     },
     {
-      "id": "12899af1-fd5e-4e0d-963f-e861acff2c65",
+      "id": "69bf3438-1445-44a2-b1cb-f46a7eb836b3",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2622,7 +2622,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qxrcga/is_it_okay_to_have_two_contrast_mris_in_one_day/",
       "author": "La_Luna_Lilith",
       "createdAt": "2026-02-06T19:28:50.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2638,7 +2638,7 @@
       }
     },
     {
-      "id": "66f284f0-83fd-4d96-b19a-14bc69835071",
+      "id": "06014b33-51a6-454b-9f91-8fea898e1818",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2647,7 +2647,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qv110v/propranalol_dosage_questions/",
       "author": "Deep_Classic_3291",
       "createdAt": "2026-02-03T19:07:22.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2663,7 +2663,7 @@
       }
     },
     {
-      "id": "b2ec9bc4-4f7d-4120-8f9c-23bb1bf6155c",
+      "id": "af918f15-9266-4770-a7fb-2e8735d2c896",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2672,7 +2672,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qp4u07/massive_multisystem_improvement_with_coq10/",
       "author": "Sea-Eagles-28",
       "createdAt": "2026-01-28T07:31:44.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2688,7 +2688,7 @@
       }
     },
     {
-      "id": "a1cc3321-b3c6-4590-a728-b9fa7781dcde",
+      "id": "4601f2c8-cd90-4e2d-9405-9c83d4f2e143",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2697,7 +2697,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qkf9p9/ppmdhormones_confusion/",
       "author": "Unreasonable_Cow",
       "createdAt": "2026-01-23T03:03:25.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2713,7 +2713,7 @@
       }
     },
     {
-      "id": "00269416-5b95-4866-9c7a-aec8b3bd4550",
+      "id": "73180d5d-2521-496f-8fb2-9ea9a3df64f8",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2722,7 +2722,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qjccih/health_struggles_for_over_4_years_now_orthostatic/",
       "author": "LopsidedEgg2440",
       "createdAt": "2026-01-21T22:24:03.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2738,7 +2738,7 @@
       }
     },
     {
-      "id": "1e7eabad-7010-4fb4-bd94-44bd92b1863e",
+      "id": "6b3031f9-0a03-4419-9935-62e692a70db4",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2747,7 +2747,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qc7edm/acute_liver_failure_but_no_cirrohsis_or_cancer/",
       "author": "whatiswrongwithliver",
       "createdAt": "2026-01-13T23:42:54.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2763,7 +2763,7 @@
       }
     },
     {
-      "id": "cea98d8a-9d4c-478a-ad90-7625e4382aeb",
+      "id": "15c2decf-9cad-4757-8cbd-87afc4a7cc42",
       "sourceId": "reddit-hypotension",
       "sourceType": "reddit",
       "sourceName": "Hypotension Patient Experiences (Reddit)",
@@ -2772,7 +2772,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1q2b696/history_of_traumatic_highrisk_delivery_looking/",
       "author": "Actual-Grape-4644",
       "createdAt": "2026-01-02T21:27:28.000Z",
-      "collectedAt": "2026-03-15T01:38:15.546Z",
+      "collectedAt": "2026-03-15T01:38:15.079Z",
       "keywords": [
         "Hypotension",
         "hypotension",
@@ -2783,12 +2783,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 6,
+        "score": 5,
         "numComments": 1
       }
     },
     {
-      "id": "7ed11fbd-b22c-445b-a3b0-7ad08c2947cd",
+      "id": "47dfe3c5-ce6c-488b-8b54-7eaca9acfb0a",
       "sourceId": "reddit-viral-fever",
       "sourceType": "reddit",
       "sourceName": "Viral Fever Patient Experiences (Reddit)",
@@ -2797,7 +2797,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/11nnzhp/pungent_smell_inside_nose_after_taking_antibiotic/",
       "author": "TempAccountAgain",
       "createdAt": "2023-03-10T12:34:18.000Z",
-      "collectedAt": "2026-03-15T01:38:14.929Z",
+      "collectedAt": "2026-03-15T01:38:14.953Z",
       "keywords": [
         "Viral Fever",
         "viral fever"
@@ -2809,7 +2809,7 @@
       }
     },
     {
-      "id": "b058386d-5d21-4f9f-85f6-65da3198a26f",
+      "id": "043bb60e-c345-403a-a1a5-c17cd20d28f9",
       "sourceId": "reddit-viral-fever",
       "sourceType": "reddit",
       "sourceName": "Viral Fever Patient Experiences (Reddit)",
@@ -2818,7 +2818,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/ohcgv0/like_something_out_of_a_chubbyemu_video/",
       "author": "Accomplished_Cod1099",
       "createdAt": "2021-07-10T05:07:44.000Z",
-      "collectedAt": "2026-03-15T01:38:14.929Z",
+      "collectedAt": "2026-03-15T01:38:14.953Z",
       "keywords": [
         "Viral Fever",
         "viral fever"
@@ -2830,7 +2830,7 @@
       }
     },
     {
-      "id": "8a275d50-4245-4630-a267-b7b0d25e035b",
+      "id": "7a6001ac-fc76-4e11-8dc6-b99ce70b78e4",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -2839,7 +2839,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1reimmh/why_would_my_tonsil_be_enlarged_like_this/",
       "author": "Vast-Swan-8111",
       "createdAt": "2026-02-25T16:52:14.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -2853,7 +2853,7 @@
       }
     },
     {
-      "id": "7da186e4-6fbd-4803-b60f-ed07b77150fc",
+      "id": "e09e5600-fd22-488f-b9ab-d545bc511518",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -2862,7 +2862,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1qf0wpe/sister_18f_bitten_by_spider_got_hospitalization/",
       "author": "AdviceThrowaway77778",
       "createdAt": "2026-01-17T02:36:47.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -2871,12 +2871,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 58,
+        "score": 53,
         "numComments": 26
       }
     },
     {
-      "id": "23f73c24-83b0-4be6-859a-e0de519dae16",
+      "id": "1daeda0b-8694-4507-92cd-7fa19e2fd20c",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -2885,7 +2885,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1pq26h0/could_there_be_an_underlying_autoimmune_reason/",
       "author": "BigBBPuddingSnatchr",
       "createdAt": "2025-12-18T21:04:35.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -2899,7 +2899,7 @@
       }
     },
     {
-      "id": "20434ae6-9b28-4977-8362-4644266a9221",
+      "id": "10d9509e-f771-4a52-a7c7-07be103a4b2f",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -2908,7 +2908,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1opv7ex/whats_happening_to_my_body_scratches_result_in/",
       "author": "Throwaway-_-Anxiety",
       "createdAt": "2025-11-06T10:15:40.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -2922,7 +2922,7 @@
       }
     },
     {
-      "id": "1cfca24e-1be1-4fac-bc67-312924e303a6",
+      "id": "38e712d6-3077-4d1d-b267-e9785d2d25ff",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -2931,7 +2931,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1om056y/my_toddlers_1m2f_were_exposed_to_shingles_by_my/",
       "author": "nunicorn25",
       "createdAt": "2025-11-01T21:52:37.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -2945,7 +2945,7 @@
       }
     },
     {
-      "id": "52ca5f3c-d9e5-4890-8b85-b848d75a5eb8",
+      "id": "311669de-950a-4922-bd56-3b8e9da65a08",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -2954,7 +2954,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1o2dc22/what_the_heck_is_wrong_with_me/",
       "author": "alisonjiyongie",
       "createdAt": "2025-10-09T18:10:48.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -2968,7 +2968,7 @@
       }
     },
     {
-      "id": "29833b7d-c2f8-41f9-ac22-0c0baf0f37e2",
+      "id": "b457331a-84d1-4e48-8e54-c5b433daee48",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -2977,7 +2977,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1m1wqba/is_this_a_vaccination_side_effect/",
       "author": "d_n_a_do_europe",
       "createdAt": "2025-07-17T03:11:43.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -2991,7 +2991,7 @@
       }
     },
     {
-      "id": "3a66ee88-29c5-49cb-b24f-952a658d63bd",
+      "id": "d5fda04c-e6bb-486a-ac4a-303d74b4a865",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3000,7 +3000,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1kyc92w/having_digestive_issues_that_are_causing_bad/",
       "author": "robotluna",
       "createdAt": "2025-05-29T14:30:17.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3014,7 +3014,7 @@
       }
     },
     {
-      "id": "8606e54d-eb04-4f4c-a03b-481c808f5b9b",
+      "id": "2c192a18-e5ba-4190-bcbe-e43faefd4e1f",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3023,7 +3023,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1kxa538/having_digestive_issues_that_are_causing_bad/",
       "author": "robotluna",
       "createdAt": "2025-05-28T06:30:01.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3037,7 +3037,7 @@
       }
     },
     {
-      "id": "7ed30975-a8a3-4fa8-b797-a9a9963dd039",
+      "id": "e9f025c9-8028-4302-87c7-f5b3accfbaee",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3046,7 +3046,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1kqnbhw/severe_systemic_immune_reaction_to_eggs_negative/",
       "author": "RoyalOverthinker",
       "createdAt": "2025-05-19T21:10:07.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3060,7 +3060,7 @@
       }
     },
     {
-      "id": "7135e47d-0897-4f7f-a386-1f63dd854594",
+      "id": "83400181-5d88-45ea-b82f-aa493558f66b",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3069,7 +3069,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1jnxke5/is_my_body_weird_or_not_idk_how_to_name_the_title/",
       "author": "Horny_Dude_26",
       "createdAt": "2025-03-31T07:18:38.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3083,7 +3083,7 @@
       }
     },
     {
-      "id": "cd5e7327-3ac2-4dfe-9bcc-925060ef778f",
+      "id": "ee16baef-efa4-4b7a-9635-40b9ae0f4777",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3092,7 +3092,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1jknsjv/intermittent_fever_and_viral_rash/",
       "author": "brownidegurl",
       "createdAt": "2025-03-26T21:52:08.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3106,7 +3106,7 @@
       }
     },
     {
-      "id": "f8be3eb1-9e03-4e09-a446-cc22af774d1a",
+      "id": "bfa2851f-5c99-4874-bf8f-72d6c43fe98d",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3115,7 +3115,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1j191oa/im_an_adult_had_no_measles_antibodies_and_just/",
       "author": "splorp_evilbastard",
       "createdAt": "2025-03-01T20:33:26.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3124,12 +3124,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 14,
+        "score": 15,
         "numComments": 11
       }
     },
     {
-      "id": "3d190548-56ba-4677-992d-0aa47648718e",
+      "id": "3d05de47-d7fe-4c14-95a7-c12dd9d74f19",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3138,7 +3138,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1j0234i/my_meds_are_messing_up_my_life_my_doctor_is_not/",
       "author": "cohabitationcodepend",
       "createdAt": "2025-02-28T07:15:03.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3152,7 +3152,7 @@
       }
     },
     {
-      "id": "c4897c31-c83e-42f8-8723-aea3f9887c89",
+      "id": "d38ecc82-3446-4cc8-91ac-3ff33ea8d913",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3161,7 +3161,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1iznjo7/should_i_33f_consider_measles_revaccination/",
       "author": "lynnhall",
       "createdAt": "2025-02-27T19:01:38.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3175,7 +3175,7 @@
       }
     },
     {
-      "id": "25fb031b-e348-4d63-bc54-ff8bf8805e73",
+      "id": "b2960194-9010-4360-8445-8ec751cce07f",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3184,7 +3184,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1iokozt/just_want_help_overall/",
       "author": "BrandyDW",
       "createdAt": "2025-02-13T14:49:37.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3198,7 +3198,7 @@
       }
     },
     {
-      "id": "46890f19-23e6-4b0f-9ee1-d505663e152e",
+      "id": "49e87ecd-7531-4212-a86f-9cdd29b7cb67",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3207,7 +3207,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1hcbuag/viral_meningitis_with_rash_that_is_not_shingles/",
       "author": "Dull_Public_2245",
       "createdAt": "2024-12-12T03:15:45.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3216,12 +3216,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 5,
+        "score": 4,
         "numComments": 1
       }
     },
     {
-      "id": "e5ba40a6-6077-46a1-a693-16979e6aa03c",
+      "id": "a442d768-9785-4b39-b6f3-6560d80e1791",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3230,7 +3230,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1gi7iza/varivax_vaccine_worries/",
       "author": "jbeex0",
       "createdAt": "2024-11-02T21:56:45.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3244,7 +3244,7 @@
       }
     },
     {
-      "id": "f5d77e88-6263-421c-8272-8208ea039ba0",
+      "id": "dd469016-f823-4954-b192-3e54cba0deb7",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3253,7 +3253,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1gcuue2/do_people_with_adhdand_possible_autism_experience/",
       "author": "Nighthawkies",
       "createdAt": "2024-10-26T21:02:37.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3267,7 +3267,7 @@
       }
     },
     {
-      "id": "082c16eb-ae80-4711-be1c-ee876264d42b",
+      "id": "b1383c22-1f9e-4f29-b2ee-a37f99ddbfd9",
       "sourceId": "reddit-chickenpox",
       "sourceType": "reddit",
       "sourceName": "Chickenpox Patient Experiences (Reddit)",
@@ -3276,7 +3276,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/1fppr5h/had_a_mri_for_occipital_neuralgia_diagnosis/",
       "author": "BEG66",
       "createdAt": "2024-09-26T06:25:16.000Z",
-      "collectedAt": "2026-03-15T01:38:15.044Z",
+      "collectedAt": "2026-03-15T01:38:15.479Z",
       "keywords": [
         "Chickenpox",
         "chickenpox",
@@ -3290,7 +3290,7 @@
       }
     },
     {
-      "id": "b65e6878-bb22-492d-b1f7-469d5c1a976d",
+      "id": "3604ed8d-b14b-49fe-9d6a-505600a3c077",
       "sourceId": "reddit-leg-fracture",
       "sourceType": "reddit",
       "sourceName": "Leg Fracture Patient Experiences (Reddit)",
@@ -3299,7 +3299,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/xr53n9/31m_severe_leg_fracture_causing_nerve_pain/",
       "author": "Acaina",
       "createdAt": "2022-09-29T11:16:21.000Z",
-      "collectedAt": "2026-03-15T01:38:14.862Z",
+      "collectedAt": "2026-03-15T01:38:14.515Z",
       "keywords": [
         "Leg Fracture",
         "leg fracture",
@@ -3308,12 +3308,12 @@
       ],
       "metadata": {
         "subreddit": "AskDocs",
-        "score": 3,
+        "score": 5,
         "numComments": 2
       }
     },
     {
-      "id": "3afd0d4c-5979-4f06-b91e-93b1b1072781",
+      "id": "abd930d7-2752-404a-9d59-0c7fe0eef480",
       "sourceId": "reddit-hand-fracture",
       "sourceType": "reddit",
       "sourceName": "Hand Fracture Patient Experiences (Reddit)",
@@ -3322,7 +3322,7 @@
       "url": "https://www.reddit.com/r/AskDocs/comments/34vc3m/stomach_issues_in_need_of_pain_relief_or/",
       "author": "rellewwork",
       "createdAt": "2015-05-04T21:31:02.000Z",
-      "collectedAt": "2026-03-15T01:38:14.956Z",
+      "collectedAt": "2026-03-15T01:38:14.517Z",
       "keywords": [
         "Hand Fracture",
         "hand fracture",

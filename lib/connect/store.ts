@@ -20,6 +20,34 @@ function nowIso() {
   return new Date().toISOString()
 }
 
+function normalizeDiseaseCategory(value: string) {
+  const text = value.trim().toLowerCase()
+
+  if (text.includes("diabet")) {
+    return "Diabetes"
+  }
+  if (text.includes("diarr") || text.includes("crohn") || text.includes("colitis") || text.includes("ibs")) {
+    return "Diarrhea"
+  }
+  if (text.includes("cancer") || text.includes("lymphoma")) {
+    return "Cancer"
+  }
+  if (text.includes("hypertension") || text.includes("blood pressure")) {
+    return "Hypertension"
+  }
+  if (text.includes("asthma")) {
+    return "Asthma"
+  }
+  if (text.includes("migraine")) {
+    return "Migraine"
+  }
+  if (text.includes("viral") || text.includes("fever")) {
+    return "Viral Fever"
+  }
+
+  return value
+}
+
 function getDefaultConnectData(): ConnectDataStore {
   const now = nowIso()
 
@@ -28,9 +56,10 @@ function getDefaultConnectData(): ConnectDataStore {
       {
         id: "mentor-lymphoma-aanya",
         name: "Aanya Sharma",
+        email: "aanya.sharma@medisyn-connect.com",
         avatarSeed: "aanya-sharma",
-        diseaseRecoveredFrom: "Hodgkin Lymphoma",
-        treatmentUsed: "ABVD chemotherapy + supportive nutrition",
+        diseaseRecoveredFrom: "Cancer",
+        treatmentUsed: "Chemotherapy + supportive nutrition",
         recoveryDuration: "11 months",
         experienceSummary:
           "I completed six cycles of treatment and learned practical routines for managing fatigue, appetite loss, and anxiety during and after chemo.",
@@ -51,12 +80,13 @@ function getDefaultConnectData(): ConnectDataStore {
       {
         id: "mentor-crohns-rafael",
         name: "Rafael Mendes",
+        email: "rafael.mendes@medisyn-connect.com",
         avatarSeed: "rafael-mendes",
-        diseaseRecoveredFrom: "Crohn's Disease",
-        treatmentUsed: "Biologics + elimination diet + stress management",
+        diseaseRecoveredFrom: "Diabetes",
+        treatmentUsed: "Medication + food planning + exercise routine",
         recoveryDuration: "18 months",
         experienceSummary:
-          "I went from frequent flare-ups to stable remission. I can share practical recovery timelines, food triggers, and emotional coping routines.",
+          "I went from unstable sugar levels to consistent control and can share practical habits for meals, activity, and medication consistency.",
         verified: true,
         language: "English, Portuguese",
         country: "Brazil",
@@ -74,12 +104,13 @@ function getDefaultConnectData(): ConnectDataStore {
       {
         id: "mentor-breastcancer-noor",
         name: "Noor Al-Hassan",
+        email: "noor.alhassan@medisyn-connect.com",
         avatarSeed: "noor-alhassan",
-        diseaseRecoveredFrom: "Breast Cancer",
-        treatmentUsed: "Surgery + adjuvant chemotherapy + hormone therapy",
+        diseaseRecoveredFrom: "Diarrhea",
+        treatmentUsed: "Hydration strategy + gut-friendly diet + follow-up care",
         recoveryDuration: "14 months",
         experienceSummary:
-          "I focus on post-surgery routines, hair-loss confidence, work reintegration, and handling uncertainty with family support.",
+          "I focus on restoring gut stability, hydration, and confidence after prolonged digestive issues and recurring loose stools.",
         verified: true,
         language: "English, Arabic",
         country: "UAE",
@@ -93,6 +124,198 @@ function getDefaultConnectData(): ConnectDataStore {
         totalSessions: 104,
         averageRating: 4.9,
         reviewCount: 40,
+      },
+      {
+        id: "mentor-hypertension-liam",
+        name: "Liam Carter",
+        email: "liam.carter@medisyn-connect.com",
+        avatarSeed: "liam-carter",
+        diseaseRecoveredFrom: "Hypertension",
+        treatmentUsed: "Medication adherence + sodium control + daily walking",
+        recoveryDuration: "9 months",
+        experienceSummary:
+          "I can share practical blood-pressure tracking routines and sustainable lifestyle adjustments that worked long term.",
+        verified: true,
+        language: "English",
+        country: "USA",
+        yearsSinceRecovery: 2,
+        disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
+        sessionPrices: [
+          { sessionType: "chat", durationMinutes: 20, priceUsd: 10 },
+          { sessionType: "audio", durationMinutes: 40, priceUsd: 19 },
+          { sessionType: "video", durationMinutes: 60, priceUsd: 28 },
+        ],
+        totalSessions: 47,
+        averageRating: 4.6,
+        reviewCount: 15,
+      },
+      {
+        id: "mentor-asthma-priya",
+        name: "Priya Nair",
+        email: "priya.nair@medisyn-connect.com",
+        avatarSeed: "priya-nair",
+        diseaseRecoveredFrom: "Asthma",
+        treatmentUsed: "Inhaler discipline + trigger tracking + breathing routines",
+        recoveryDuration: "10 months",
+        experienceSummary:
+          "I help patients build routines to reduce flare-ups and handle daily life with better breathing confidence.",
+        verified: true,
+        language: "English, Hindi",
+        country: "India",
+        yearsSinceRecovery: 3,
+        disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
+        sessionPrices: [
+          { sessionType: "chat", durationMinutes: 20, priceUsd: 9 },
+          { sessionType: "audio", durationMinutes: 40, priceUsd: 18 },
+          { sessionType: "video", durationMinutes: 60, priceUsd: 27 },
+        ],
+        totalSessions: 58,
+        averageRating: 4.7,
+        reviewCount: 19,
+      },
+      {
+        id: "mentor-migraine-zoe",
+        name: "Zoe Martin",
+        email: "zoe.martin@medisyn-connect.com",
+        avatarSeed: "zoe-martin",
+        diseaseRecoveredFrom: "Migraine",
+        treatmentUsed: "Trigger tracking + medication timing + hydration routine",
+        recoveryDuration: "8 months",
+        experienceSummary:
+          "I can share practical steps that helped reduce migraine frequency and improve daily functioning.",
+        verified: true,
+        language: "English",
+        country: "UK",
+        yearsSinceRecovery: 2,
+        disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
+        sessionPrices: [
+          { sessionType: "chat", durationMinutes: 20, priceUsd: 10 },
+          { sessionType: "audio", durationMinutes: 40, priceUsd: 19 },
+          { sessionType: "video", durationMinutes: 60, priceUsd: 29 },
+        ],
+        totalSessions: 53,
+        averageRating: 4.7,
+        reviewCount: 17,
+      },
+      {
+        id: "mentor-viralfever-omar",
+        name: "Omar Siddiqui",
+        email: "omar.siddiqui@medisyn-connect.com",
+        avatarSeed: "omar-siddiqui",
+        diseaseRecoveredFrom: "Viral Fever",
+        treatmentUsed: "Rest protocol + hydration + monitored recovery",
+        recoveryDuration: "6 weeks",
+        experienceSummary:
+          "I help patients manage post-viral fatigue, hydration habits, and safe return-to-work routines.",
+        verified: true,
+        language: "English, Urdu",
+        country: "Pakistan",
+        yearsSinceRecovery: 2,
+        disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
+        sessionPrices: [
+          { sessionType: "chat", durationMinutes: 20, priceUsd: 8 },
+          { sessionType: "audio", durationMinutes: 40, priceUsd: 16 },
+          { sessionType: "video", durationMinutes: 60, priceUsd: 24 },
+        ],
+        totalSessions: 36,
+        averageRating: 4.6,
+        reviewCount: 12,
+      },
+      {
+        id: "mentor-cancer-david",
+        name: "David Kim",
+        email: "david.kim@medisyn-connect.com",
+        avatarSeed: "david-kim",
+        diseaseRecoveredFrom: "Cancer",
+        treatmentUsed: "Surgery + chemo support plan + nutrition",
+        recoveryDuration: "13 months",
+        experienceSummary:
+          "I can share practical coping routines for treatment cycles, energy management, and family communication.",
+        verified: true,
+        language: "English, Korean",
+        country: "South Korea",
+        yearsSinceRecovery: 4,
+        disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
+        sessionPrices: [
+          { sessionType: "chat", durationMinutes: 20, priceUsd: 12 },
+          { sessionType: "audio", durationMinutes: 40, priceUsd: 23 },
+          { sessionType: "video", durationMinutes: 60, priceUsd: 35 },
+        ],
+        totalSessions: 79,
+        averageRating: 4.8,
+        reviewCount: 24,
+      },
+      {
+        id: "mentor-diabetes-elena",
+        name: "Elena Petrova",
+        email: "elena.petrova@medisyn-connect.com",
+        avatarSeed: "elena-petrova",
+        diseaseRecoveredFrom: "Diabetes",
+        treatmentUsed: "Continuous glucose monitoring + meal planning",
+        recoveryDuration: "12 months",
+        experienceSummary:
+          "I guide patients on glucose monitoring discipline and practical day-to-day meal adjustments.",
+        verified: true,
+        language: "English, Russian",
+        country: "Bulgaria",
+        yearsSinceRecovery: 3,
+        disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
+        sessionPrices: [
+          { sessionType: "chat", durationMinutes: 20, priceUsd: 11 },
+          { sessionType: "audio", durationMinutes: 40, priceUsd: 20 },
+          { sessionType: "video", durationMinutes: 60, priceUsd: 31 },
+        ],
+        totalSessions: 66,
+        averageRating: 4.7,
+        reviewCount: 22,
+      },
+      {
+        id: "mentor-diarrhea-sana",
+        name: "Sana Farooq",
+        email: "sana.farooq@medisyn-connect.com",
+        avatarSeed: "sana-farooq",
+        diseaseRecoveredFrom: "Diarrhea",
+        treatmentUsed: "Diet reset + hydration + follow-up testing",
+        recoveryDuration: "4 months",
+        experienceSummary:
+          "I can help patients with practical routines for hydration, diet reintroduction, and symptom tracking.",
+        verified: true,
+        language: "English, Hindi",
+        country: "India",
+        yearsSinceRecovery: 2,
+        disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
+        sessionPrices: [
+          { sessionType: "chat", durationMinutes: 20, priceUsd: 9 },
+          { sessionType: "audio", durationMinutes: 40, priceUsd: 17 },
+          { sessionType: "video", durationMinutes: 60, priceUsd: 26 },
+        ],
+        totalSessions: 42,
+        averageRating: 4.6,
+        reviewCount: 14,
+      },
+      {
+        id: "mentor-cancer-lakshya",
+        name: "Lakshya Vashishta",
+        email: "shuklanaman9079@gmail.com",
+        avatarSeed: "lakshya-vashishta",
+        diseaseRecoveredFrom: "Cancer",
+        treatmentUsed: "Chemo cycle planning + nutrition support + recovery routines",
+        recoveryDuration: "12 months",
+        experienceSummary:
+          "I support patients with practical guidance on managing treatment routines, fatigue windows, and confidence during recovery.",
+        verified: true,
+        language: "English, Hindi",
+        country: "India",
+        yearsSinceRecovery: 2,
+        disclaimer: "Mentor shares personal recovery experience only and does not provide medical advice.",
+        sessionPrices: [
+          { sessionType: "chat", durationMinutes: 20, priceUsd: 12 },
+          { sessionType: "audio", durationMinutes: 40, priceUsd: 22 },
+          { sessionType: "video", durationMinutes: 60, priceUsd: 34 },
+        ],
+        totalSessions: 31,
+        averageRating: 4.8,
+        reviewCount: 11,
       },
     ],
     reviews: [
@@ -139,6 +362,25 @@ export async function loadConnectData() {
     if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.mentors) || !parsed.config?.proPlan) {
       throw new Error("Invalid Medisyn Connect data shape")
     }
+
+    const defaultMentors = getDefaultConnectData().mentors
+    const existingIds = new Set(parsed.mentors.map((mentor) => mentor.id))
+    const missingMentors = defaultMentors.filter((mentor) => !existingIds.has(mentor.id))
+
+    if (missingMentors.length > 0) {
+      parsed.mentors = [...parsed.mentors, ...missingMentors]
+    }
+
+    parsed.mentors = parsed.mentors.map((mentor) => ({
+      ...mentor,
+      email:
+        mentor.id === "mentor-cancer-lakshya"
+          ? "shuklanaman9079@gmail.com"
+          : mentor.email && mentor.email.trim().length > 0
+            ? mentor.email
+            : `${mentor.name.toLowerCase().replace(/[^a-z0-9]+/g, ".").replace(/^\.|\.$/g, "")}@medisyn-connect.com`,
+      diseaseRecoveredFrom: normalizeDiseaseCategory(mentor.diseaseRecoveredFrom),
+    }))
 
     return parsed
   } catch {

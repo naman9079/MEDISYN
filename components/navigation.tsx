@@ -31,6 +31,38 @@ const navItems = [
   { href: "/ai-insights", label: "AI Insights", icon: Sparkles },
 ]
 
+type NavNotification = {
+  id: string
+  title: string
+  detail: string
+  time: string
+  read: boolean
+}
+
+const initialNotifications: NavNotification[] = [
+  {
+    id: "notif-connect-booking",
+    title: "New Connect booking",
+    detail: "A mentorship session request was submitted.",
+    time: "2m ago",
+    read: false,
+  },
+  {
+    id: "notif-data-refresh",
+    title: "Data refreshed",
+    detail: "Latest treatment discussions are available.",
+    time: "12m ago",
+    read: false,
+  },
+  {
+    id: "notif-plan",
+    title: "Plan update",
+    detail: "Your Pro plan billing is up to date.",
+    time: "1d ago",
+    read: true,
+  },
+]
+
 export function Navigation() {
   const pathname = usePathname()
   const router = useRouter()
@@ -88,6 +120,25 @@ export function Navigation() {
   const navAvatarSeed = navProfile?.avatarSeed || "medisyn"
   const navInitials = `${navProfile?.firstName?.[0] ?? "S"}${navProfile?.lastName?.[0] ?? "C"}`
   const navPlanLabel = `${navSubscriptionPlan.toUpperCase()} Plan`
+  const [notifications, setNotifications] = useState<NavNotification[]>(initialNotifications)
+  const unreadNotificationCount = notifications.filter((item) => !item.read).length
+
+  function markAllNotificationsRead() {
+    setNotifications((current) => current.map((item) => ({ ...item, read: true })))
+  }
+
+  function markNotificationRead(id: string) {
+    setNotifications((current) =>
+      current.map((item) =>
+        item.id === id
+          ? {
+              ...item,
+              read: true,
+            }
+          : item,
+      ),
+    )
+  }
 
   function submitSearch(query: string) {
     const trimmedQuery = query.trim()
@@ -123,15 +174,19 @@ export function Navigation() {
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const Icon = item.icon
+              const isActive = pathname === item.href
+              const isConnect = item.href === "/connect"
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
                     "flex items-center gap-2 px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200",
-                    pathname === item.href
+                    isActive
                       ? "bg-primary/10 text-primary shadow-sm"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/60",
+                    isConnect && !isActive && "border border-primary/30 bg-primary/5 text-primary/90 hover:bg-primary/10",
+                    isConnect && isActive && "border border-primary/40 bg-primary/20 text-primary shadow-md"
                   )}
                 >
                   <Icon className="h-4 w-4" />
@@ -164,10 +219,64 @@ export function Navigation() {
             </Button>
           </form>
           
-          <Button variant="ghost" size="icon" className="relative group transition-colors duration-200">
-            <Bell className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
-            <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-warm animate-pulse" />
-          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="relative group transition-colors duration-200">
+                <Bell className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+                {unreadNotificationCount > 0 ? (
+                  <>
+                    <span className="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-warm animate-pulse" />
+                    <span className="absolute -right-1 -top-1 min-w-4 rounded-full bg-primary px-1 text-center text-[10px] font-semibold text-primary-foreground">
+                      {unreadNotificationCount}
+                    </span>
+                  </>
+                ) : null}
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-80 p-2" align="end" sideOffset={8}>
+              <DropdownMenuLabel className="flex items-center justify-between px-2 py-2">
+                <span>Notifications</span>
+                {unreadNotificationCount > 0 ? (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="h-7 px-2 text-xs"
+                    onClick={(event) => {
+                      event.preventDefault()
+                      markAllNotificationsRead()
+                    }}
+                  >
+                    Mark all read
+                  </Button>
+                ) : null}
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator className="-mx-2" />
+              <div className="max-h-80 overflow-y-auto py-1">
+                {notifications.map((notification) => (
+                  <DropdownMenuItem
+                    key={notification.id}
+                    className="cursor-pointer items-start gap-3 rounded-lg px-3 py-3"
+                    onSelect={() => markNotificationRead(notification.id)}
+                  >
+                    <span
+                      className={cn(
+                        "mt-1 h-2 w-2 rounded-full",
+                        notification.read ? "bg-muted-foreground/40" : "bg-primary",
+                      )}
+                    />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium text-foreground">{notification.title}</span>
+                      <span className="text-xs text-muted-foreground">{notification.detail}</span>
+                      <span className="mt-1 text-[10px] uppercase tracking-wide text-muted-foreground">{notification.time}</span>
+                    </div>
+                  </DropdownMenuItem>
+                ))}
+                {notifications.length === 0 ? (
+                  <p className="px-3 py-6 text-center text-sm text-muted-foreground">No notifications</p>
+                ) : null}
+              </div>
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           {/* Profile Dropdown */}
           <DropdownMenu>
@@ -281,15 +390,19 @@ export function Navigation() {
                   <nav className="flex flex-col gap-1">
                     {navItems.map((item) => {
                       const Icon = item.icon
+                      const isActive = pathname === item.href
+                      const isConnect = item.href === "/connect"
                       return (
                         <Link
                           key={item.href}
                           href={item.href}
                           className={cn(
                             "flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200",
-                            pathname === item.href
+                            isActive
                               ? "bg-primary/10 text-primary shadow-sm"
-                              : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+                              : "text-muted-foreground hover:text-foreground hover:bg-muted/60",
+                            isConnect && !isActive && "border border-primary/30 bg-primary/5 text-primary/90 hover:bg-primary/10",
+                            isConnect && isActive && "border border-primary/40 bg-primary/20 text-primary shadow-md"
                           )}
                         >
                           <Icon className="h-5 w-5" />
