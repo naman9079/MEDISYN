@@ -20,3 +20,6 @@ node_modules/
 backend/.venv/
 backend/__pycache__/
 *.pyc
+
+# Generated runtime data
+data/real/connect-marketplace.json
