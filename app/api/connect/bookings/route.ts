@@ -1,0 +1,80 @@
+import { NextRequest, NextResponse } from "next/server"
+import { createBooking, listBookings } from "@/lib/connect/store"
+import type { BookingCreateInput, SessionDuration, SessionType } from "@/lib/connect/types"
+
+export const runtime = "nodejs"
+
+function parseSessionType(value: unknown): SessionType | null {
+  return value === "chat" || value === "audio" || value === "video" ? value : null
+}
+
+function parseSessionDuration(value: unknown): SessionDuration | null {
+  return value === 20 || value === 40 || value === 60 ? value : null
+}
+
+function parsePaymentProvider(value: unknown): "stripe" | "razorpay" | null {
+  return value === "stripe" || value === "razorpay" ? value : null
+}
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url)
+    const limitParam = Number(searchParams.get("limit") ?? "30")
+    const bookings = await listBookings(Number.isFinite(limitParam) ? limitParam : 30)
+
+    return NextResponse.json({ ok: true, bookings })
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Failed to load bookings",
+      },
+      { status: 500 },
+    )
+  }
+}
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = (await request.json().catch(() => null)) as Partial<BookingCreateInput> | null
+
+    if (!body) {
+      return NextResponse.json({ ok: false, error: "Invalid payload" }, { status: 400 })
+    }
+
+    const sessionType = parseSessionType(body.sessionType)
+    const durationMinutes = parseSessionDuration(body.durationMinutes)
+    const paymentProvider = parsePaymentProvider(body.paymentProvider)
+
+    if (!body.mentorId || !sessionType || !durationMinutes || !paymentProvider) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "mentorId, sessionType, durationMinutes, and paymentProvider are required",
+        },
+        { status: 400 },
+      )
+    }
+
+    const booking = await createBooking({
+      mentorId: body.mentorId,
+      patientName: String(body.patientName ?? ""),
+      patientEmail: String(body.patientEmail ?? ""),
+      disease: String(body.disease ?? ""),
+      sessionType,
+      durationMinutes,
+      scheduledAt: String(body.scheduledAt ?? ""),
+      paymentProvider,
+    })
+
+    return NextResponse.json({ ok: true, ...booking }, { status: 201 })
+  } catch (error) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: error instanceof Error ? error.message : "Failed to create booking",
+      },
+      { status: 400 },
+    )
+  }
+}

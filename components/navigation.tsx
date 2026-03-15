@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { useEffect, useMemo, useState } from "react"
 import { cn } from "@/lib/utils"
 import { medisynSearchSuggestionId, medisynSearchSuggestions } from "@/lib/search-suggestions"
-import { Activity, LayoutDashboard, Users, Sparkles, Search, Bell, Menu, User, Settings, LogOut, HelpCircle, CreditCard, FileSearch } from "lucide-react"
+import { Activity, LayoutDashboard, Users, Sparkles, Search, Bell, Menu, User, Settings, LogOut, HelpCircle, CreditCard, FileSearch, Handshake } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -26,6 +26,7 @@ const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
   { href: "/treatment-insights", label: "Treatment Insights", icon: Activity },
   { href: "/patient-experiences", label: "Patient Experiences", icon: Users },
+  { href: "/connect", label: "Medisyn Connect", icon: Handshake },
   { href: "/report-insights", label: "Report Insights", icon: FileSearch },
   { href: "/ai-insights", label: "AI Insights", icon: Sparkles },
 ]
