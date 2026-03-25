@@ -150,3 +150,122 @@
   stroke-dasharray: 260;
   animation: hero-ecg-pulse 2.4s ease-in-out infinite;
 }
+
+@keyframes dashboard-orb-float-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(16px, -10px, 0) scale(1.08);
+  }
+}
+
+@keyframes dashboard-orb-float-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-12px, 14px, 0) scale(1.12);
+  }
+}
+
+@keyframes dashboard-orb-float-c {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(8px, 18px, 0) scale(1.06);
+  }
+}
+
+.dashboard-main {
+  isolation: isolate;
+}
+
+.dashboard-bg-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -4;
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--primary) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--primary) 8%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(circle at 50% 10%, black 35%, transparent 85%);
+  pointer-events: none;
+}
+
+.dashboard-bg-orb {
+  position: absolute;
+  z-index: -3;
+  border-radius: 999px;
+  filter: blur(42px);
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.dashboard-bg-orb-a {
+  top: 2.2rem;
+  left: -2.5rem;
+  height: 14rem;
+  width: 14rem;
+  background: color-mix(in oklab, var(--primary) 36%, transparent);
+  animation: dashboard-orb-float-a 9s ease-in-out infinite;
+}
+
+.dashboard-bg-orb-b {
+  top: 8rem;
+  right: -1.4rem;
+  height: 16rem;
+  width: 16rem;
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
+  animation: dashboard-orb-float-b 11s ease-in-out infinite;
+}
+
+.dashboard-bg-orb-c {
+  top: 18rem;
+  left: 34%;
+  height: 12rem;
+  width: 12rem;
+  background: color-mix(in oklab, var(--warm) 30%, transparent);
+  animation: dashboard-orb-float-c 10s ease-in-out infinite;
+}
+
+.dashboard-hero-pill {
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 18px color-mix(in oklab, var(--warm) 22%, transparent);
+}
+
+.dashboard-hero-title {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  background: linear-gradient(120deg, color-mix(in oklab, var(--foreground) 96%, var(--primary) 4%) 0%, color-mix(in oklab, var(--foreground) 78%, var(--primary) 22%) 45%, color-mix(in oklab, var(--foreground) 88%, var(--accent) 12%) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 0 color-mix(in oklab, var(--primary) 10%, transparent);
+}
+
+.dashboard-hero-subtitle {
+  max-width: 60ch;
+  letter-spacing: 0.004em;
+}
+
+@media (max-width: 768px) {
+  .dashboard-bg-orb-a,
+  .dashboard-bg-orb-b,
+  .dashboard-bg-orb-c {
+    filter: blur(36px);
+    opacity: 0.38;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-bg-orb-a,
+  .dashboard-bg-orb-b,
+  .dashboard-bg-orb-c {
+    animation: none;
+  }
+}

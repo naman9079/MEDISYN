@@ -122,8 +122,9 @@ export async function POST(request: NextRequest) {
         latestFile: path.relative(process.cwd(), persisted.latestFile),
       },
       database: {
-        dbPath: path.relative(process.cwd(), persisted.dbResult.dbPath),
+        dbPath: persisted.dbResult.dbPath,
         insertedItems: persisted.dbResult.insertedItems,
+        error: persisted.dbResult.error ?? null,
       },
     })
   } catch (error) {

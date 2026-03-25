@@ -13,8 +13,11 @@ import type {
 } from "@/lib/connect/types"
 
 const CONNECT_FILE = path.join(process.cwd(), "data", "real", "connect-marketplace.json")
+const CONNECT_CACHE_TTL_MS = 30_000
 
 const SESSION_DURATION_OPTIONS = [20, 40, 60] as const
+
+let connectCache: { data: ConnectDataStore; cachedAt: number } | null = null
 
 const STANDARD_SESSION_PRICES = {
   chat: 199,
@@ -357,7 +360,18 @@ async function ensureFile(data: ConnectDataStore) {
   await writeFile(CONNECT_FILE, JSON.stringify(data, null, 2), "utf8")
 }
 
+function setConnectCache(data: ConnectDataStore) {
+  connectCache = {
+    data,
+    cachedAt: Date.now(),
+  }
+}
+
 export async function loadConnectData() {
+  if (connectCache && Date.now() - connectCache.cachedAt < CONNECT_CACHE_TTL_MS) {
+    return connectCache.data
+  }
+
   try {
     const text = await readFile(CONNECT_FILE, "utf8")
     const parsed = JSON.parse(text) as ConnectDataStore
@@ -369,14 +383,20 @@ export async function loadConnectData() {
     const defaultMentors = getDefaultConnectData().mentors
     const existingIds = new Set(parsed.mentors.map((mentor) => mentor.id))
     const missingMentors = defaultMentors.filter((mentor) => !existingIds.has(mentor.id))
+    let shouldPersist = false
 
     if (missingMentors.length > 0) {
       parsed.mentors = [...parsed.mentors, ...missingMentors]
+      shouldPersist = true
     }
 
-    parsed.mentors = parsed.mentors.map(normalizeMentorProfile)
+    const normalizedMentors = parsed.mentors.map(normalizeMentorProfile)
+    if (JSON.stringify(normalizedMentors) !== JSON.stringify(parsed.mentors)) {
+      shouldPersist = true
+    }
+    parsed.mentors = normalizedMentors
 
-    parsed.config = {
+    const normalizedConfig = {
       ...parsed.config,
       proPlan: {
         ...parsed.config.proPlan,
@@ -384,11 +404,19 @@ export async function loadConnectData() {
         monthlyUsd: 49,
       },
     }
+    if (JSON.stringify(normalizedConfig) !== JSON.stringify(parsed.config)) {
+      shouldPersist = true
+    }
+    parsed.config = normalizedConfig
 
-    await ensureFile({
-      ...parsed,
-      updatedAt: nowIso(),
-    })
+    if (shouldPersist) {
+      await ensureFile({
+        ...parsed,
+        updatedAt: nowIso(),
+      })
+    }
+
+    setConnectCache(parsed)
 
     return parsed
   } catch {
@@ -399,6 +427,7 @@ export async function loadConnectData() {
       updatedAt: nowIso(),
     }
     await ensureFile(normalizedFallback)
+    setConnectCache(normalizedFallback)
     return normalizedFallback
   }
 }
@@ -410,6 +439,7 @@ async function saveConnectData(data: ConnectDataStore) {
   }
 
   await ensureFile(payload)
+  setConnectCache(payload)
   return payload
 }
 
@@ -518,6 +548,7 @@ export async function createBooking(input: BookingCreateInput) {
     mentorId: mentor.id,
     patientName: input.patientName.trim(),
     patientEmail: input.patientEmail.trim(),
+    patientPhone: input.patientPhone?.trim() || undefined,
     disease: input.disease.trim(),
     sessionType: input.sessionType,
     durationMinutes: input.durationMinutes,

@@ -42,6 +42,7 @@ export type MentorBooking = {
   mentorId: string
   patientName: string
   patientEmail: string
+  patientPhone?: string
   disease: string
   sessionType: SessionType
   durationMinutes: SessionDuration
@@ -82,6 +83,7 @@ export type BookingCreateInput = {
   mentorId: string
   patientName: string
   patientEmail: string
+  patientPhone?: string
   disease: string
   sessionType: SessionType
   durationMinutes: SessionDuration

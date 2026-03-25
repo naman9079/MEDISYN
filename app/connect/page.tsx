@@ -185,12 +185,7 @@ export default function MedisynConnectPage() {
       return
     }
 
-    const bookingMessage = `Session booked: ${sessionTypeLabels[payload.booking.sessionType]} on ${formatDateTime(payload.booking.scheduledAt)} for ${formatCurrency(payload.booking.amountUsd)}.`
-    const emailMessage = payload.emailDelivery
-      ? payload.emailDelivery.sent
-        ? ` ${payload.emailDelivery.message}`
-        : " Email notifications are currently unavailable."
-      : ""
+    const bookingMessage = `Session booked successfully: ${sessionTypeLabels[payload.booking.sessionType]} on ${formatDateTime(payload.booking.scheduledAt)} for ${formatCurrency(payload.booking.amountUsd)}.`
 
     const mentorName = bookingMentor?.name ?? "your mentor"
     addInAppNotification({
@@ -198,25 +193,11 @@ export default function MedisynConnectPage() {
       detail: `${sessionTypeLabels[payload.booking.sessionType]} with ${mentorName} on ${formatDateTime(payload.booking.scheduledAt)}.`,
     })
 
-    if (payload.emailDelivery && !payload.emailDelivery.sent) {
-      addInAppNotification({
-        title: "Email delivery pending",
-        detail: "Booking is confirmed, but email notifications could not be sent yet.",
-      })
-    }
-
-    setBookingStatus(`${bookingMessage}${emailMessage}`)
+    setBookingStatus(bookingMessage)
     toast({
       title: "Session booked",
-      description: `${sessionTypeLabels[payload.booking.sessionType]} on ${formatDateTime(payload.booking.scheduledAt)}.`,
+      description: "Booking confirmed.",
     })
-
-    if (payload.emailDelivery && !payload.emailDelivery.sent) {
-      toast({
-        title: "Email pending",
-        description: "Booking is confirmed, but email notifications are not delivered yet.",
-      })
-    }
 
     setPatientName("")
     setPatientEmail("")
@@ -376,7 +357,7 @@ export default function MedisynConnectPage() {
                       onClick={() => {
                         setSelectedMentorId(mentor.id)
                         setActiveBookingMentorId((current) => (current === mentor.id ? null : mentor.id))
-                        setBookingStatus(null)
+                        setBookingStatus("Fill details and click Book Session. WhatsApp confirmation will be sent after booking.")
                       }}
                     >
                       <CalendarCheck2 className="mr-2 h-4 w-4" />
@@ -386,6 +367,10 @@ export default function MedisynConnectPage() {
 
                   {isBookingOpen ? (
                     <form className="mt-3 space-y-3 rounded-xl border border-primary/20 bg-primary/5 p-3" onSubmit={(event) => void handleBookSession(event, mentor.id)}>
+                      <p className="rounded-lg border border-primary/25 bg-background/80 px-3 py-2 text-xs text-muted-foreground">
+                        Fill your details and click Book Session. WhatsApp notification is sent automatically after booking.
+                      </p>
+
                       <div className="grid gap-3 md:grid-cols-2">
                         <Input placeholder="Your name" value={patientName} onChange={(event) => setPatientName(event.target.value)} className="border-border/70 bg-background/85" />
                         <Input placeholder="Your email" value={patientEmail} onChange={(event) => setPatientEmail(event.target.value)} className="border-border/70 bg-background/85" />

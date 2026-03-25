@@ -19,6 +19,7 @@ type GeminiSummaryResponse = {
 }
 
 const geminiModelCandidates = ["gemini-2.5-flash", "gemini-1.5-flash", "gemini-2.0-flash"]
+const reportSignalPattern = /(hba1c|glucose|ldl|hdl|triglycer|creatinine|hemoglobin|platelet|vitamin|b12|wbc|urea|cholesterol|mg\/dl|g\/dl|%)/i
 
 function getGeminiApiKey() {
   const key = process.env.GEMINI_API_KEY?.trim() || process.env.GOOGLE_API_KEY?.trim() || ""
@@ -101,6 +102,45 @@ function normalizeSummaryPoints(summary: string) {
   }
 
   return `• ${summary.trim()}`
+}
+
+function hasMedicalReportSignal(text: string) {
+  const compact = text.replace(/\s+/g, " ").trim()
+  const digitCount = (compact.match(/\d/g) ?? []).length
+  return compact.length >= 30 && digitCount >= 3 && reportSignalPattern.test(compact)
+}
+
+function getGeminiFailureWarning(status: number, details: string) {
+  const normalizedDetails = details.toLowerCase()
+
+  if (status === 401 || status === 403 || normalizedDetails.includes("api key not valid")) {
+    return "Gemini API key is invalid or unauthorized. Showing local fallback summary."
+  }
+
+  if (status === 429 || normalizedDetails.includes("quota") || normalizedDetails.includes("rate")) {
+    return "Gemini quota/rate limit exceeded. Showing local fallback summary."
+  }
+
+  return "Gemini request failed. Showing local fallback summary."
+}
+
+function getGeminiErrorMessage(status: number, details: string) {
+  const normalizedDetails = details.toLowerCase()
+
+  if (status === 401 || status === 403 || normalizedDetails.includes("api key not valid")) {
+    return "Gemini API key is invalid or unauthorized. Update GEMINI_API_KEY (or GOOGLE_API_KEY) in .env.local and restart the server."
+  }
+
+  if (status === 429 || normalizedDetails.includes("quota") || normalizedDetails.includes("rate")) {
+    return "Gemini quota/rate limit exceeded. Please try again later or use a key with available quota."
+  }
+
+  const firstLine = details
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 180)
+
+  return firstLine || "Gemini request failed."
 }
 
 function buildFallbackSummary(reportText: string): GeminiSummaryResponse {
@@ -228,11 +268,22 @@ export async function POST(request: Request) {
     }
 
     if (!raw) {
+      if (hasImage && !hasMedicalReportSignal(reportText)) {
+        return NextResponse.json(
+          {
+            error:
+              "Image analysis requires a working Gemini API key right now. OCR text quality is too low for local fallback parsing.",
+            details: getGeminiErrorMessage(lastStatus, lastErrorText),
+          },
+          { status: 502 },
+        )
+      }
+
       if (hasImage && !reportText) {
         return NextResponse.json(
           {
             error: "Gemini could not analyze this image right now.",
-            details: lastErrorText.slice(0, 500),
+            details: getGeminiErrorMessage(lastStatus, lastErrorText),
           },
           { status: 502 },
         )
@@ -240,11 +291,8 @@ export async function POST(request: Request) {
 
       return NextResponse.json({
         result: buildFallbackSummary(reportText),
-        warning:
-          lastStatus === 401 || lastStatus === 403
-            ? "Gemini authentication failed. Showing local fallback summary."
-            : "Gemini request failed or quota exceeded. Showing local fallback summary.",
-        details: lastErrorText.slice(0, 500),
+        warning: getGeminiFailureWarning(lastStatus, lastErrorText),
+        details: getGeminiErrorMessage(lastStatus, lastErrorText),
       })
     }
 

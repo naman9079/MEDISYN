@@ -1,1 +1,50 @@
-[]
+[
+	{
+		"id": "exp1",
+		"author": "Jane Doe",
+		"initials": "JD",
+		"treatment": "Metformin",
+		"condition": "Type 2 Diabetes",
+		"date": "2026-03-20",
+		"content": "Started Metformin last month. Noticed mild nausea but blood sugar is improving.",
+		"tags": ["Side Effects", "Recovery"],
+		"sentiment": "positive",
+		"credibilityScore": 92,
+		"likes": 5,
+		"replies": 2,
+		"verified": true,
+		"sourceUrl": "https://reddit.com/r/diabetes/exp1"
+	},
+	{
+		"id": "exp2",
+		"author": "John Smith",
+		"initials": "JS",
+		"treatment": "Insulin",
+		"condition": "Type 1 Diabetes",
+		"date": "2026-03-18",
+		"content": "Insulin therapy has stabilized my glucose but I sometimes feel dizzy.",
+		"tags": ["Outcome", "Side Effects"],
+		"sentiment": "neutral",
+		"credibilityScore": 88,
+		"likes": 3,
+		"replies": 1,
+		"verified": true,
+		"sourceUrl": "https://reddit.com/r/diabetes/exp2"
+	},
+	{
+		"id": "exp3",
+		"author": "A. Patel",
+		"initials": "AP",
+		"treatment": "Prednisone",
+		"condition": "Asthma",
+		"date": "2026-03-15",
+		"content": "Prednisone reduced my asthma attacks but caused weight gain.",
+		"tags": ["Outcome", "Side Effects"],
+		"sentiment": "neutral",
+		"credibilityScore": 85,
+		"likes": 2,
+		"replies": 0,
+		"verified": false,
+		"sourceUrl": "https://reddit.com/r/asthma/exp3"
+	}
+]

@@ -191,8 +191,9 @@ export default function ReportInsightsPage() {
       }
 
       if (!response.ok || !payload.result) {
-        const detailedMessage = payload.details ? ` ${payload.details}` : ""
-        setNotice((payload.error ?? "Could not summarize this report with Gemini.") + detailedMessage)
+        const baseMessage = payload.error ?? "Could not summarize this report with Gemini."
+        const detailMessage = payload.details ? ` ${payload.details}` : ""
+        setNotice(`${baseMessage}${detailMessage}`.trim())
         return
       }
 

@@ -269,35 +269,14 @@ function isPatientExperience(value: unknown): value is PatientExperience {
 }
 
 export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url)
-  const requestedSourceType = searchParams.get("sourceType")
-  const sourceType = requestedSourceType === "reddit" || requestedSourceType === "rss" || requestedSourceType === "web-page"
-    ? requestedSourceType
-    : undefined
-
   const realDataPath = path.join(process.cwd(), "data", "real", "patient-experiences.json")
-
   try {
-    const realtimeItems = await fromRealtimeDb(120, sourceType)
-
-    if (realtimeItems.length > 0) {
-      return NextResponse.json({
-        source: "realtime-db" satisfies DataSource,
-        path: "supabase-postgres",
-        note: `Showing ${realtimeItems.length} latest collected patient discussions from realtime DB${sourceType ? ` (${sourceType})` : ""}.`,
-        items: realtimeItems,
-      })
-    }
-
     const fileContent = await readFile(realDataPath, "utf8")
     const parsed = JSON.parse(fileContent) as unknown
-
     if (!Array.isArray(parsed)) {
       throw new Error("Real data file must contain an array.")
     }
-
     const items = parsed.filter(isPatientExperience)
-
     return NextResponse.json({
       source: "real-file" satisfies DataSource,
       path: "data/real/patient-experiences.json",

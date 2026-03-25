@@ -234,21 +234,25 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="dashboard-ambient min-h-screen bg-background overflow-x-clip">
       <Navigation />
       
-      <main className="container mx-auto px-4 py-8">
+      <main className="dashboard-main container mx-auto px-4 py-8 relative">
+        <div className="dashboard-bg-grid" aria-hidden="true" />
+        <div className="dashboard-bg-orb dashboard-bg-orb-a" aria-hidden="true" />
+        <div className="dashboard-bg-orb dashboard-bg-orb-b" aria-hidden="true" />
+        <div className="dashboard-bg-orb dashboard-bg-orb-c" aria-hidden="true" />
         {/* Hero Search Section */}
         <section className="mb-12">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-warm/10 text-warm text-sm font-medium mb-4">
+            <div className="dashboard-hero-pill inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-warm/10 text-warm text-sm font-medium mb-4">
               <Zap className="h-3.5 w-3.5" />
               AI-Powered Healthcare Analytics
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 text-balance">
+            <h1 className="dashboard-hero-title text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-4 text-balance">
               Discover Treatment Insights
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-pretty">
+            <p className="dashboard-hero-subtitle text-muted-foreground text-lg max-w-2xl mx-auto text-pretty">
               Analyze patient experiences, side effects, and recovery outcomes with advanced AI
             </p>
             <div className="mt-6 flex justify-center">

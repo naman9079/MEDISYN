@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-03-25T08:16:56.947Z",
+  "totalItems": 0,
+  "sourceCount": 10,
+  "successfulSources": 0,
+  "failedSources": 10,
+  "sources": [
+    {
+      "id": "reddit-pancreatitis",
+      "name": "Pancreatitis Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(Pancreatitis%20OR%20pancreatitis%20OR%20pancreataitis)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-cancer",
+      "name": "Cancer Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(Cancer%20OR%20cancer)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-asthma",
+      "name": "Asthma Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(Asthma%20OR%20asthma)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-migraine",
+      "name": "Migraine Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(Migraine%20OR%20migraine%20OR%20migrain)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-hypertension",
+      "name": "Hypertension Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(Hypertension%20OR%20hypertension%20OR%20%22high%20blood%20pressure%22%20OR%20%22bp%20high%22%20OR%20%22high%20bp%22%20OR%20%22bp%20is%20high%22)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-hypotension",
+      "name": "Hypotension Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(Hypotension%20OR%20hypotension%20OR%20%22low%20blood%20pressure%22%20OR%20%22bp%20low%22%20OR%20%22low%20bp%22%20OR%20%22bp%20is%20low%22)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-viral-fever",
+      "name": "Viral Fever Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(%22Viral%20Fever%22%20OR%20%22viral%20fever%22)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-chickenpox",
+      "name": "Chickenpox Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(Chickenpox%20OR%20chickenpox%20OR%20%22chicken%20pox%22%20OR%20%22chikon%20pox%22)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-leg-fracture",
+      "name": "Leg Fracture Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(%22Leg%20Fracture%22%20OR%20%22leg%20fracture%22%20OR%20%22fracture%20of%20leg%22%20OR%20%22fractured%20leg%22)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    },
+    {
+      "id": "reddit-hand-fracture",
+      "name": "Hand Fracture Patient Experiences (Reddit)",
+      "type": "reddit",
+      "itemCount": 0,
+      "error": "Request failed (429) for https://www.reddit.com/r/AskDocs/search.json?q=(%22Hand%20Fracture%22%20OR%20%22hand%20fracture%22%20OR%20%22fracture%20of%20hand%22%20OR%20%22fractured%20hand%22)%20(experience%20OR%20treatment%20OR%20medication%20OR%20recovery%20OR%20side%20effects)&restrict_sr=1&sort=new&limit=20"
+    }
+  ],
+  "items": []
+}

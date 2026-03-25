@@ -56,6 +56,7 @@ export async function POST(request: NextRequest) {
       mentorId: body.mentorId,
       patientName: String(body.patientName ?? ""),
       patientEmail: String(body.patientEmail ?? ""),
+      patientPhone: String(body.patientPhone ?? ""),
       disease: String(body.disease ?? ""),
       sessionType,
       durationMinutes,

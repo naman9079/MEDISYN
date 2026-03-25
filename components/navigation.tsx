@@ -80,7 +80,7 @@ export function Navigation() {
     return () => {
       isMounted = false
     }
-  }, [pathname])
+  }, [])
 
   const navName = useMemo(() => {
     if (!navProfile) {
